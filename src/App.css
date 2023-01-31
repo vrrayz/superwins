@@ -209,11 +209,13 @@ a {
 .custom-modal{
   width: 100%;
   max-width: 320px;
-  /* height: 200px; */
   padding: 1.5rem;
   border-radius: 25px;
   background-color: #1d222e;
   margin: auto;
+  animation-name: fadeIn;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
 }
 .modal-head{
   display: flex;
@@ -224,6 +226,7 @@ a {
 }
 .modal-head h1{
   margin-left: auto;
+  font-size: 1.727rem;
 }
 .modal-desc{
   color: #bbb;
