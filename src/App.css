@@ -165,7 +165,10 @@ header.menu-container.open-menu{
   margin-left: 16px;
   margin-right: 16px;
 }
-.menu-footer .item i{
+.navbar-brand-i{
+  font-size: 1.4rem;
+}
+i.glow{
   color: #e70707;
   text-shadow: 0px 0px 5px #cb0707;
 }

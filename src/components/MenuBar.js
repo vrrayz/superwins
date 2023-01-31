@@ -27,13 +27,13 @@ export const MenuBar = ({setConnectWalletModal}) => {
         </div>
         <div className="menu-footer">
           <Link to={"/"} className="item">
-            <i className="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-instagram glow"></i>
           </Link>
           <Link to={"/"} className="item">
-            <i className="fa-brands fa-twitter"></i>
+            <i className="fa-brands fa-twitter glow"></i>
           </Link>
           <Link to={"/"} className="item">
-            <i className="fa-brands fa-discord"></i>
+            <i className="fa-brands fa-discord glow"></i>
           </Link>
         </div>
       </section>
