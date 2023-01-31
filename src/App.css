@@ -36,3 +36,58 @@ body{
     transform: rotate(360deg);
   }
 }
+.navbar-collapse.custom{
+  flex-grow: 0;
+}
+.sidebar-toggle .toggle-container{
+  margin: auto;
+  width: 1.5rem;
+  height: 1rem;
+  /* background-color: white; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.toggle-lines{
+  width: 1.5rem;
+  border: 1.5px solid #fff;
+  transition: .3s;
+}
+.toggle-lines:nth-child(2){
+  width: 1rem;
+  margin-left: auto;
+}
+
+.toggle-lines.close:nth-child(1){
+  display: none;
+}
+.toggle-lines.close:nth-child(2){
+  position: relative;
+  width: 1.5rem;
+  transform: rotate(135deg);
+  transition: .3s;
+  top: 9px;
+}
+.toggle-lines.close:nth-child(3){
+  position: relative;
+  width: 1.5rem;
+  transform: rotate(45deg);
+  bottom: 5px;
+}
+.navbar-brand .logo{
+  width: 150px;
+}
+.bg-dark{
+  background-color: #000 !important;
+}
+.navbar{
+  border-bottom: 2px solid #733;
+}
+.navbar-brand{
+  
+  display: block;
+  margin: auto;
+  /* padding-bottom: 12px; */
+  padding: 12px 0px;
+
+}
