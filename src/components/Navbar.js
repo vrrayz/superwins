@@ -36,7 +36,12 @@ export const Navbar = () => {
 const MenuBar = () => {
   return (
     <section className="menubar">
-      <div></div>
+      <div className="menu-list top-section">
+        <button className="menubar-item btn btn-primary">Connect wallet</button>
+        <Link to={"/"} className="menubar-item">
+          Why Connect
+        </Link>
+      </div>
       <div className="menu-list">
         <Link to={"/"} className="menubar-item">
           Corporate

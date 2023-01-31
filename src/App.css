@@ -120,9 +120,9 @@ header.menu-container.open-menu{
 
 .menubar {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
-  background-color: #fff;
+  background-color: #000;
   flex-grow: 1;
 }
 .menubar .menu-list{
@@ -130,14 +130,29 @@ header.menu-container.open-menu{
   justify-content: center;
   flex-direction: column;
 }
-.menubar .menubar-item {
+.menubar .menu-list .menubar-item {
   padding: 12px;
   margin: auto;
   margin-bottom: 4px;
   font-size: 1.5rem;
   text-transform: uppercase;
 }
+.menubar .menu-list a.menubar-item{
+  color: #fff;
+}
+.menu-list.top-section .menubar-item{
+  font-size: 1rem;
+}
 
 a {
   text-decoration: none;
+}
+.btn{
+  border-radius: 25px;
+  padding: 12px 32px !important;
+}
+.btn-primary{
+  background-color: rgba(237,27,36, .1);
+  border:3px solid rgb(120, 52, 52);
+
 }
