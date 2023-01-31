@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MenuBarToggle } from "./MenuBarToggle";
 import { MenuBar } from "./MenuBar";
+import { ConnectButton } from "./ConnectButton";
 
 import logo from "../assets/img/logo.png";
 
@@ -22,7 +23,7 @@ export const Navbar = () => {
             </Link>
           </div>
           <div className="collapse navbar-collapse custom">
-          <button className="menubar-item btn btn-primary">Connect wallet</button>
+            <ConnectButton />
           </div>
           <MenuBarToggle
             setIsMenuBarToggled={setIsMenuBarToggled}

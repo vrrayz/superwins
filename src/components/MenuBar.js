@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { ConnectButton } from './ConnectButton';
 
 export const MenuBar = () => {
     return (
       <section className="menubar">
         <div className="menu-list top-section">
-          <button className="menubar-item btn btn-primary">Connect wallet</button>
+          <ConnectButton />
           <button className="menubar-item text-secondary btn btn-transparent">
             Why Connect?
           </button>

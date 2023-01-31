@@ -184,6 +184,10 @@ a {
   border:3px solid rgb(174, 47, 47);
 
 }
+.btn-primary:hover, .btn-primary:active{
+  background-color: rgba(231, 7, 7, .6) !important;
+  border:3px solid rgb(174, 47, 47) !important;
+}
 .brand-icon{
   font-size: 1.4rem;
     margin-left: 16px;
