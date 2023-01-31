@@ -3,11 +3,11 @@ import { ConnectWalletModal } from './ConnectWalletModal';
 import { Navbar } from './Navbar'
 
 export const Home = () => {
-  const [showConnectModal, setShowConnectModal] = useState(true);
+  const [connectWalletModal, setConnectWalletModal] = useState(false);
   return (
     <>
-        <Navbar />
-        {showConnectModal && <ConnectWalletModal />}
+        <Navbar setConnectWalletModal={setConnectWalletModal}/>
+        {connectWalletModal && <ConnectWalletModal setConnectWalletModal={setConnectWalletModal} />}
     </>
   )
 }

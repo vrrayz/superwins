@@ -4,13 +4,13 @@ import walletconnect_logo from '../assets/img/wallets/walletconnect.svg'
 import coinbase_logo from '../assets/img/wallets/coinbase.png'
 import closeIcon from '../assets/img/icons/close.svg'
 
-export const ConnectWalletModal = () => {
+export const ConnectWalletModal = ({setConnectWalletModal}) => {
   return (
     <div className='modal-overlay'>
         <div className="custom-modal">
             <div className="modal-head">
                 <h1>Connect</h1>
-                <button className='btn custom-btn-close text-light'>
+                <button className='btn custom-btn-close text-light' onClick={() => setConnectWalletModal(false)}>
                     <img src={closeIcon} alt="close" />
                 </button>
             </div>

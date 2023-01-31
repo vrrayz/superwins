@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { ConnectButton } from './ConnectButton';
 
-export const MenuBar = () => {
+export const MenuBar = ({setConnectWalletModal}) => {
     return (
       <section className="menubar">
         <div className="menu-list top-section">
-          <ConnectButton />
+        <ConnectButton setConnectWalletModal={setConnectWalletModal}/>
           <button className="menubar-item text-secondary btn btn-transparent">
             Why Connect?
           </button>

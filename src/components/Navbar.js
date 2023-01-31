@@ -6,7 +6,7 @@ import { ConnectButton } from "./ConnectButton";
 
 import logo from "../assets/img/logo.png";
 
-export const Navbar = () => {
+export const Navbar = ({setConnectWalletModal}) => {
   const [isMenuBarToggled, setIsMenuBarToggled] = useState(false);
 
   return (
@@ -23,7 +23,7 @@ export const Navbar = () => {
             </Link>
           </div>
           <div className="collapse navbar-collapse custom">
-            <ConnectButton />
+            <ConnectButton setConnectWalletModal={setConnectWalletModal}/>
           </div>
           <MenuBarToggle
             setIsMenuBarToggled={setIsMenuBarToggled}
@@ -31,7 +31,7 @@ export const Navbar = () => {
           />
         </div>
       </nav>
-      {isMenuBarToggled && <MenuBar />}
+      {isMenuBarToggled && <MenuBar setConnectWalletModal={setConnectWalletModal} />}
     </header>
   );
 };
