@@ -38,9 +38,9 @@ const MenuBar = () => {
     <section className="menubar">
       <div className="menu-list top-section">
         <button className="menubar-item btn btn-primary">Connect wallet</button>
-        <Link to={"/"} className="menubar-item">
-          Why Connect
-        </Link>
+        <button className="menubar-item text-secondary btn btn-transparent">
+          Why Connect?
+        </button>
       </div>
       <div className="menu-list">
         <Link to={"/"} className="menubar-item">
@@ -56,7 +56,17 @@ const MenuBar = () => {
           Terms
         </Link>
       </div>
-      <div></div>
+      <div className="menu-footer">
+        <Link to={"/"} className="item">
+          <i className="fa-brands fa-instagram"></i>
+        </Link>
+        <Link to={"/"} className="item">
+          <i className="fa-brands fa-twitter"></i>
+        </Link>
+        <Link to={"/"} className="item">
+          <i className="fa-brands fa-discord"></i>
+        </Link>
+      </div>
     </section>
   );
 };
