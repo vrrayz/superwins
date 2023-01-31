@@ -99,7 +99,7 @@ body {
 }
 
 .navbar {
-  border-bottom: 2px solid #733;
+  border-bottom: 1.5px solid #e70707;
 }
 
 .navbar-brand {
@@ -166,7 +166,7 @@ header.menu-container.open-menu{
   margin-right: 16px;
 }
 .menu-footer .item i{
-  color: rgb(173, 40, 40);
+  color: #e70707;
   text-shadow: 0px 0px 5px #cb0707;
 }
 a {
@@ -175,9 +175,18 @@ a {
 .btn{
   border-radius: 25px;
   padding: 12px 32px !important;
+  text-transform: uppercase;
+  font-size: 14px !important;
+  letter-spacing: 1px;
 }
 .btn-primary{
-  background-color: rgba(237,27,36, .1);
-  border:3px solid rgb(120, 52, 52);
+  background-color: rgba(231, 7, 7, .1);
+  border:3px solid rgb(174, 47, 47);
 
+}
+.brand-icon{
+  font-size: 1.4rem;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 22px !important;
 }
