@@ -273,3 +273,21 @@ a {
 .modal-head .custom-btn-close{
   margin-left: auto;
 }
+/* *************** TABS *************** */
+.tabs{
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 16px;
+}
+.tabs .tab-item{
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 16px 0px;
+  text-decoration: none;
+  color: #fff;
+  /* letter-spacing: px; */
+}
+.tabs .tab-item:active, .tabs .tab-item.active{
+  color: #e70707;
+}
