@@ -177,17 +177,20 @@ a {
 }
 .btn{
   border-radius: 25px;
-  padding: 12px 32px !important;
   text-transform: uppercase;
   font-size: 14px !important;
   letter-spacing: 1px;
 }
-.btn-primary{
+.navbar .btn, .menubar .btn{
+  padding: 12px 32px !important;
+}
+.btn-primary-transparent{
   background-color: rgba(231, 7, 7, .1);
   border:3px solid rgb(174, 47, 47);
+  color: #fff;
 
 }
-.btn-primary:hover, .btn-primary:active{
+.btn-primary-transparent:hover, .btn-primary-transparent:active{
   background-color: rgba(231, 7, 7, .6) !important;
   border:3px solid rgb(174, 47, 47) !important;
 }
@@ -292,7 +295,7 @@ a {
   color: #e70707;
 }
 .badge{
-  color: #767982;
+  color: #707177;
   background-color: #fff;
   font-size: 14px;
   border-radius: 25px;
@@ -338,9 +341,39 @@ a {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 }
+.nft-info{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 170px;
+  left: 4px;
+}
 .badge.mint_serial{
-  margin-right: auto;
-  margin-left: 8px;
-  position: relative;
-  bottom: 24px;
+  z-index: 1;
+}
+.badge.time_left{
+  background-color: #e70707;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #fff;
+}
+h5.nft_heading{
+  color: #707177;
+  font-weight: bold;
+  font-size: 14px;
+}
+.card.nft-card{
+  color: #707177;
+}
+.nft-value .amount{
+  font-size: 18px;
+  margin-left: 4px;
+  font-weight: bold;
+  color: #313135;
+}
+.nft-card-footer{
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px -6px;
 }
