@@ -291,15 +291,22 @@ a {
 .tabs .tab-item:active, .tabs .tab-item.active{
   color: #e70707;
 }
+.badge{
+  color: #767982;
+  background-color: #fff;
+  font-size: 14px;
+  border-radius: 25px;
+  padding: 4px 8px;
+}
 .tab-item .badge{
   position: relative;
   bottom: 5px;
   right: 1px;
-}
-.badge{
-  border-radius: 50%;
-  padding: 4px;
   background-color: #e70707;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px;
+  font-size: 12px;
 }
 
 .info{
@@ -326,8 +333,14 @@ a {
 }
 .nft-card-image{
   object-fit: cover;
-    height: 150px;
+    height: 175px;
     border-radius: 6px;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
+}
+.badge.mint_serial{
+  margin-right: auto;
+  margin-left: 8px;
+  position: relative;
+  bottom: 24px;
 }
