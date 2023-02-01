@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
 body {
-  background-color: #202633;
+  background-color: #000;
   font-family: 'Play', sans-serif;
 }
 
@@ -300,4 +300,34 @@ a {
   border-radius: 50%;
   padding: 4px;
   background-color: #e70707;
+}
+
+.info{
+  background-color: #141820;
+  border-radius: 4px;
+}
+.info-text{
+  padding: 6px 8px;
+  font-size: 0.8rem;
+  color: #fff;
+  text-align: center;
+}
+.featured .section-heading{
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 6px;
+}
+.nft-card-image{
+  object-fit: cover;
+    height: 150px;
+    border-radius: 6px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
