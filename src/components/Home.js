@@ -64,7 +64,7 @@ export const Home = () => {
         <div className="section-heading">
           <span>Featured</span>
         </div>
-        <div className="grid">
+        <div className="nft-grid">
           <div className="grid-item">
             <div className="card nft-card border-0">
               <img

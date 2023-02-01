@@ -329,7 +329,7 @@ a {
   font-weight: 600;
   font-size: 1.2rem;
 }
-.grid{
+.nft-grid{
   display: grid;
   grid-template-columns: 50% 50%;
   column-gap: 6px;
