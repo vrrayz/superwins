@@ -21,4 +21,48 @@ export const nftCompetitionData = [
     totalParticipants: 100,
     closeDate: "3 Jan 2020",
   },
+  {
+    id: 3,
+    imgSrc:
+      "https://i.seadn.io/gae/ZxISqq2miZ2sg6J3b7Pq5pBGUjKrkFNgBIC6jXDFnEoi9S7D72m6F37dP7WoCEWDVAsAdtIH2HUmSsaKFetySd9_0bUlxy4BrB7rtIM?fit=max&w=350&auto=format",
+    mintNumber: 430,
+    timeLeft: "5 hours left!",
+    name: "Mutant Ape Yacht",
+    value: 4027,
+    totalParticipants: 100,
+    closeDate: "3 Jan 2020",
+  },
+  {
+    id: 4,
+    imgSrc:
+      "https://i.seadn.io/gae/ZxISqq2miZ2sg6J3b7Pq5pBGUjKrkFNgBIC6jXDFnEoi9S7D72m6F37dP7WoCEWDVAsAdtIH2HUmSsaKFetySd9_0bUlxy4BrB7rtIM?fit=max&w=350&auto=format",
+    mintNumber: 430,
+    timeLeft: "5 hours left!",
+    name: "Mutant Ape Yacht",
+    value: 4027,
+    totalParticipants: 100,
+    closeDate: "3 Jan 2020",
+  },
+  {
+    id: 5,
+    imgSrc:
+      "https://i.seadn.io/gae/ZxISqq2miZ2sg6J3b7Pq5pBGUjKrkFNgBIC6jXDFnEoi9S7D72m6F37dP7WoCEWDVAsAdtIH2HUmSsaKFetySd9_0bUlxy4BrB7rtIM?fit=max&w=350&auto=format",
+    mintNumber: 430,
+    timeLeft: "5 hours left!",
+    name: "Mutant Ape Yacht",
+    value: 4027,
+    totalParticipants: 100,
+    closeDate: "3 Jan 2020",
+  },
+  {
+    id: 6,
+    imgSrc:
+      "https://i.seadn.io/gae/ZxISqq2miZ2sg6J3b7Pq5pBGUjKrkFNgBIC6jXDFnEoi9S7D72m6F37dP7WoCEWDVAsAdtIH2HUmSsaKFetySd9_0bUlxy4BrB7rtIM?fit=max&w=350&auto=format",
+    mintNumber: 430,
+    timeLeft: "5 hours left!",
+    name: "Mutant Ape Yacht",
+    value: 4027,
+    totalParticipants: 100,
+    closeDate: "3 Jan 2020",
+  },
 ];
