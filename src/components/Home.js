@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { tabData } from "../data/tabData";
-import { NftGridItem } from "./NftGridItem";
-
 import { nftCompetitionData } from "../data/nftCompetitionData";
-import styled from "styled-components";
+
+import { GridSection } from "./NftGrid/GridSection";
 
 export const Home = () => {
   const [urlParams, setUrlParams] = useState(new URLSearchParams(""));
@@ -68,41 +67,5 @@ export const Home = () => {
     </>
   );
 };
-const GridSection = ({ nftCompetitionData, className, sectionHeading }) => {
-  const [isCarouselView, setIsCarouselView] = useState(false)
-  return (
-    <section className={`${className} px-3`}>
-      <div className="section-heading">
-        <span>{sectionHeading}</span>
-      </div>
-      <NftGrid nftCompetitionData={nftCompetitionData} isCarouselView = {isCarouselView} />
-    </section>
-  );
-};
-const NftGrid = ({ nftCompetitionData, isCarouselView }) => {
-  const gridTemplateColumnCondition = (templateColumn) => isCarouselView ? nftCompetitionData.map((x) => {
-    return `${templateColumn}%`;
-  }): `${templateColumn}% `.repeat(parseInt(100 / templateColumn))
-  const CustomNftGrid = styled.div`
-    display: grid;
-    grid-template-columns: ${gridTemplateColumnCondition(50)};
-    overflow-x:scroll;
-    @media (min-width: 768px) {
-        grid-template-columns: ${gridTemplateColumnCondition(24.5)};
-      }
-    
-    @media (min-width: 1024px) {
-        grid-template-columns: ${gridTemplateColumnCondition(19.5)};
-    }
-  `;
-  useEffect(() => {
-    console.log(gridTemplateColumnCondition(50))
-  })
-  return (
-    <CustomNftGrid className="nft-grid">
-      {nftCompetitionData.map((competition) => {
-        return <NftGridItem key={competition.id} {...competition} />;
-      })}
-    </CustomNftGrid>
-  );
-};
+
+

@@ -322,12 +322,13 @@ a {
   color: #fff;
   text-align: center;
 }
-.featured .section-heading{
+.section-heading{
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 1px;
   font-weight: 600;
   font-size: 1.2rem;
+  margin-bottom: 8px;
 }
 .nft-grid{
   display: grid;
