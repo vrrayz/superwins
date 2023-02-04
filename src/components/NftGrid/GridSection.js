@@ -21,7 +21,7 @@ export const GridSection = ({
     background-color: transparent;
   `;
   return (
-    <section className={`${className} px-3`}>
+    <section className={`${className} px-3 mb-5`}>
       <GridSectionHeading className="section-heading">
         <span>{sectionHeading}</span>
         <ToggleViewButton onClick={() => setIsCarouselView(!isCarouselView)}>

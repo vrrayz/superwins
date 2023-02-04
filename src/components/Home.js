@@ -64,6 +64,8 @@ export const Home = () => {
         </div>
       </section>
       <GridSection nftCompetitionData={nftCompetitionData} className='featured' sectionHeading={'featured'} />
+      <GridSection nftCompetitionData={nftCompetitionData} className='hourly-schedule' sectionHeading={'hourly schedule'} />
+      <GridSection nftCompetitionData={nftCompetitionData} className='daily-killer-bears' sectionHeading={'daily killer bears'} />
     </>
   );
 };
