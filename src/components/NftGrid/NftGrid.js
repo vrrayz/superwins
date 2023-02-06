@@ -12,10 +12,11 @@ export const NftGrid = ({ nftCompetitionData, isCarouselView }) => {
       grid-template-columns: ${gridTemplateColumnCondition(49)};
       overflow-x:scroll;
       &::-webkit-scrollbar {
-        height: 12px;
+        height: 4px;
       }
       &::-webkit-scrollbar-thumb {
         background-color: #e70707;
+        border-radius: 25px;
       }
       @media (min-width: 768px) {
           grid-template-columns: ${gridTemplateColumnCondition(24.5)};
@@ -26,7 +27,7 @@ export const NftGrid = ({ nftCompetitionData, isCarouselView }) => {
       }
     `;
     return (
-      <CustomNftGrid className="nft-grid">
+      <CustomNftGrid className="nft-grid pb-3">
         {nftCompetitionData.map((competition) => {
           return <NftGridItem key={competition.id} {...competition} />;
         })}
