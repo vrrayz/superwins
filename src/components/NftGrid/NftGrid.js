@@ -9,8 +9,14 @@ export const NftGrid = ({ nftCompetitionData, isCarouselView }) => {
     }): `${templateColumn}% `.repeat(parseInt(100 / templateColumn))
     const CustomNftGrid = styled.div`
       display: grid;
-      grid-template-columns: ${gridTemplateColumnCondition(50)};
+      grid-template-columns: ${gridTemplateColumnCondition(49)};
       overflow-x:scroll;
+      &::-webkit-scrollbar {
+        height: 12px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #e70707;
+      }
       @media (min-width: 768px) {
           grid-template-columns: ${gridTemplateColumnCondition(24.5)};
         }

@@ -334,7 +334,7 @@ a {
   display: grid;
   grid-template-columns: 50% 50%;
   column-gap: 6px;
-  row-gap: 6px;
+  row-gap: 8px;
 }
 @media (min-width: 768px) {
   .nft-grid{

@@ -21,11 +21,11 @@ export const GridSection = ({
     background-color: transparent;
   `;
   return (
-    <section className={`${className} px-3 mb-5`}>
-      <GridSectionHeading className="section-heading">
+    <section className={`${className} px-2 mb-5`}>
+      <GridSectionHeading className="section-heading px-1">
         <span>{sectionHeading}</span>
         <ToggleViewButton onClick={() => setIsCarouselView(!isCarouselView)}>
-            {isCarouselView ? <i class="fa-solid fa-table-cells-large me-1"></i>:<i class="fa-solid fa-pause me-1"></i>}
+            {isCarouselView ? <i className="fa-solid fa-table-cells-large me-1"></i>:<i className="fa-solid fa-pause me-1"></i>}
             Switch to{isCarouselView ? "grid view" : "carousel"}
         </ToggleViewButton>
       </GridSectionHeading>
