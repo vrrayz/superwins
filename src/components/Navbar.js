@@ -4,9 +4,8 @@ import { MenuBarToggle } from "./MenuBarToggle";
 import { MenuBar } from "./MenuBar";
 import { ConnectButton } from "./ConnectButton";
 
-import logo from "../assets/img/logo.png";
 
-export const Navbar = ({setConnectWalletModal}) => {
+export const Navbar = ({setConnectWalletModal,logo}) => {
   const [isMenuBarToggled, setIsMenuBarToggled] = useState(false);
 
   return (

@@ -7,6 +7,7 @@ import { LoadingScreen } from "./components/LoadingScreen";
 import { Navbar } from "./components/Navbar";
 
 import "./App.css";
+import logo from "../src/assets/img/logo.png";
 import { Footer } from "./components/Footer/Footer";
 
 function App() {
@@ -24,14 +25,14 @@ function App() {
         <LoadingScreen />
       ) : (
         <>
-          <Navbar setConnectWalletModal={setConnectWalletModal} />
+          <Navbar setConnectWalletModal={setConnectWalletModal} logo={logo} />
           {connectWalletModal && (
             <ConnectWalletModal setConnectWalletModal={setConnectWalletModal} />
           )}
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
-          <Footer />
+          <Footer logo={logo} />
         </>
       )}
     </Router>
