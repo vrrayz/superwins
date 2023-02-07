@@ -332,6 +332,17 @@ a {
   color: #fff;
   /* letter-spacing: px; */
 }
+@media (min-width:768px){
+  .tabs .tab-item {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 16px 0px;
+    margin: 0px 12px;
+    text-decoration: none;
+    color: #fff;
+    /* letter-spacing: px; */
+  }
+}
 
 .tabs .tab-item:active,
 .tabs .tab-item.active {

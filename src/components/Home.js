@@ -5,6 +5,7 @@ import { tabData } from "../data/tabData";
 import { nftCompetitionData } from "../data/nftCompetitionData";
 
 import { GridSection } from "./NftGrid/GridSection";
+import { Tabs } from "./Tabs/Tabs";
 
 export const Home = () => {
   const [urlParams, setUrlParams] = useState(new URLSearchParams(""));
@@ -33,29 +34,7 @@ export const Home = () => {
 
   return (
     <>
-      <section className="tabs">
-        <Link
-          to={"/"}
-          className={`tab-item ${tabs.live && "active"}`}
-          onClick={() => updateParams()}
-        >
-          live now (67)
-        </Link>
-        <Link
-          to={"/?tab=completed"}
-          className={`tab-item ${tabs.completed && "active"}`}
-          onClick={() => updateParams("?tab=completed")}
-        >
-          completed (2399)
-        </Link>
-        <Link
-          to={"/?tab=activity"}
-          className={`tab-item ${tabs.activity && "active"}`}
-          onClick={() => updateParams("?tab=activity")}
-        >
-          activity <span className="badge badge-primary">11</span>
-        </Link>
-      </section>
+      <Tabs tabs={tabs} updateParams={updateParams} />
       <section className="info-section px-3">
         <div className="info">
           <p className="info-text">
