@@ -155,12 +155,12 @@ header.menu-container.open-menu{
 .menu-list.top-section .menubar-item{
   font-size: 1rem;
 }
-.menubar .menu-footer{
+.menubar .menu-footer, .footer-socials{
   display: flex;
   justify-content: center;
   margin-bottom: 48px;
 }
-.menu-footer .item{
+.menu-footer .item, .footer-socials .item{
   font-size: 1.5rem;
   margin-left: 16px;
   margin-right: 16px;

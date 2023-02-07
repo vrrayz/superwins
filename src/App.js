@@ -7,6 +7,7 @@ import { LoadingScreen } from "./components/LoadingScreen";
 import { Navbar } from "./components/Navbar";
 
 import "./App.css";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,6 +31,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
+          <Footer />
         </>
       )}
     </Router>
