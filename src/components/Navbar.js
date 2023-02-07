@@ -3,17 +3,20 @@ import { Link } from "react-router-dom";
 import { MenuBarToggle } from "./MenuBarToggle";
 import { MenuBar } from "./MenuBar";
 import { ConnectButton } from "./ConnectButton";
+import styled from "styled-components";
 
-
-export const Navbar = ({setConnectWalletModal,logo}) => {
+export const Navbar = ({ setConnectWalletModal, logo }) => {
   const [isMenuBarToggled, setIsMenuBarToggled] = useState(false);
+  const CustomNav = styled.nav`
+    ${!isMenuBarToggled && `backdrop-filter: blur(6px); background-color: rgba(0, 0, 0, 0.9) !important;`}
+  `;
 
   return (
     <header className={`menu-container ${isMenuBarToggled && `open-menu`}`}>
-      <nav className="navbar navbar-expand-lg bg-dark py-0">
+      <CustomNav className="navbar navbar-expand-lg bg-dark py-0">
         <div className="container-fluid">
-          <Link to={'/'} className="navbar-brand-i d-lg-none">
-          <i className="fa-brands fa-discord glow"></i>
+          <Link to={"/"} className="navbar-brand-i d-lg-none">
+            <i className="fa-brands fa-discord glow"></i>
           </Link>
           <div className="d-flex">
             <Link to={"/"} className="navbar-brand">
@@ -24,15 +27,17 @@ export const Navbar = ({setConnectWalletModal,logo}) => {
             </Link>
           </div>
           <div className="collapse navbar-collapse custom">
-            <ConnectButton setConnectWalletModal={setConnectWalletModal}/>
+            <ConnectButton setConnectWalletModal={setConnectWalletModal} />
           </div>
           <MenuBarToggle
             setIsMenuBarToggled={setIsMenuBarToggled}
             isMenuBarToggled={isMenuBarToggled}
           />
         </div>
-      </nav>
-      {isMenuBarToggled && <MenuBar setConnectWalletModal={setConnectWalletModal} />}
+      </CustomNav>
+      {isMenuBarToggled && (
+        <MenuBar setConnectWalletModal={setConnectWalletModal} />
+      )}
     </header>
   );
 };
