@@ -61,6 +61,11 @@ export const Home = () => {
           />
         </>
       )}
+      {tabs.completed && (
+        <>
+          <h1>Tab completed section</h1>
+        </>
+      )}
     </>
   );
 };
