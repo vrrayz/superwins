@@ -43,30 +43,29 @@ export const Home = () => {
           </p>
         </div>
       </section>
-      {tabs.live && (
-        <>
-          <GridSection
-            nftCompetitionData={nftCompetitionData}
-            className="featured"
-            sectionHeading={"featured"}
-          />
-          <GridSection
-            nftCompetitionData={nftCompetitionData}
-            className="hourly-schedule"
-            sectionHeading={"hourly schedule"}
-          />
-          <GridSection
-            nftCompetitionData={nftCompetitionData}
-            className="daily-killer-bears"
-            sectionHeading={"daily killer bears"}
-          />
-        </>
-      )}
-      {tabs.completed && (
-        <>
-          <CompletedSection />
-        </>
-      )}
+      {tabs.live && <LiveSection />}
+      {tabs.completed && <CompletedSection />}
+    </>
+  );
+};
+const LiveSection = () => {
+  return (
+    <>
+      <GridSection
+        nftCompetitionData={nftCompetitionData}
+        className="featured"
+        sectionHeading={"featured"}
+      />
+      <GridSection
+        nftCompetitionData={nftCompetitionData}
+        className="hourly-schedule"
+        sectionHeading={"hourly schedule"}
+      />
+      <GridSection
+        nftCompetitionData={nftCompetitionData}
+        className="daily-killer-bears"
+        sectionHeading={"daily killer bears"}
+      />
     </>
   );
 };
