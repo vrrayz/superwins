@@ -6,6 +6,7 @@ import { nftCompetitionData } from "../data/nftCompetitionData";
 
 import { GridSection } from "./NftGrid/GridSection";
 import { Tabs } from "./Tabs/Tabs";
+import styled from "styled-components";
 
 export const Home = () => {
   const [urlParams, setUrlParams] = useState(new URLSearchParams(""));
@@ -63,9 +64,60 @@ export const Home = () => {
       )}
       {tabs.completed && (
         <>
-          <h1>Tab completed section</h1>
+          <CompletedSection />
         </>
       )}
     </>
   );
 };
+const CompletedSection = () => {
+  const [isHourlySchedule, setIsHourlySchedule] = useState(true);
+
+  return (
+    <>
+      <InnerTabContainer>
+        <InnerTabItem
+          className={isHourlySchedule ? "active" : ""}
+          onClick={() => setIsHourlySchedule(true)}
+        >
+          Hourly Schedule
+        </InnerTabItem>
+        <InnerTabItem
+          className={isHourlySchedule ? "" : "active"}
+          onClick={() => setIsHourlySchedule(false)}
+        >
+          Head 2 Head
+        </InnerTabItem>
+      </InnerTabContainer>
+      {isHourlySchedule ? (
+        <GridSection
+          nftCompetitionData={nftCompetitionData}
+          className=""
+          sectionHeading={""}
+        />
+      ) : (
+        <GridSection
+          nftCompetitionData={nftCompetitionData}
+          className=""
+          sectionHeading={""}
+        />
+      )}
+    </>
+  );
+};
+const InnerTabContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  column-gap: 16px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+`;
+const InnerTabItem = styled.div`
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+
+  &.active {
+    color: #e70707;
+  }
+`;
