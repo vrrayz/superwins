@@ -9,6 +9,7 @@ export const nftCompetitionData = [
     value: 42427,
     totalParticipants: 218,
     closeDate: "3 Feb 2013",
+    isHourly: true,
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const nftCompetitionData = [
     value: 4027,
     totalParticipants: 100,
     closeDate: "3 Jan 2020",
+    isHourly: false,
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ export const nftCompetitionData = [
     value: 4027,
     totalParticipants: 100,
     closeDate: "3 Jan 2020",
+    isHourly: true,
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ export const nftCompetitionData = [
     value: 4027,
     totalParticipants: 100,
     closeDate: "3 Jan 2020",
+    isHourly: false,
   },
   {
     id: 5,
@@ -53,6 +57,7 @@ export const nftCompetitionData = [
     value: 4027,
     totalParticipants: 100,
     closeDate: "3 Jan 2020",
+    isHourly: true,
   },
   {
     id: 6,
@@ -64,5 +69,6 @@ export const nftCompetitionData = [
     value: 4027,
     totalParticipants: 100,
     closeDate: "3 Jan 2020",
+    isHourly: true,
   },
 ];
