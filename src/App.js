@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import { ConnectWalletModal } from "./components/ConnectWalletModal";
-import { Home } from "./components/Home";
+import { Home } from "./components/Home/Home";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { Navbar } from "./components/Navbar";
 
