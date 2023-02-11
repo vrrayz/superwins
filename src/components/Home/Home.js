@@ -7,6 +7,7 @@ import { nftCompetitionData } from "../../data/nftCompetitionData";
 import { Tabs } from "../Tabs/Tabs";
 import { LiveSection } from "./LiveSection";
 import { CompletedSection } from "./CompletedSection";
+import { ActivitySection } from "./ActivitySection";
 
 export const Home = () => {
   const [urlParams, setUrlParams] = useState(new URLSearchParams(""));
@@ -45,6 +46,7 @@ export const Home = () => {
       </section>
       {tabs.live && <LiveSection nftCompetitionData={nftCompetitionData} />}
       {tabs.completed && <CompletedSection nftCompetitionData={nftCompetitionData} />}
+      {tabs.activity && <ActivitySection />}
     </>
   );
 };
