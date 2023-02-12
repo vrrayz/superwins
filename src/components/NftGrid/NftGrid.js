@@ -11,7 +11,10 @@ export const NftGrid = ({ nftCompetitionData, isCarouselView }) => {
         })
       : `${templateColumn}% `.repeat(parseInt(100 / templateColumn));
   return (
-    <CustomNftGrid templateColumn={gridTemplateColumnCondition} className="nft-grid pb-3">
+    <CustomNftGrid
+      templateColumn={gridTemplateColumnCondition}
+      className="nft-grid pb-3"
+    >
       {nftCompetitionData.map((competition) => {
         return <NftGridItem key={competition.id} {...competition} />;
       })}
@@ -19,23 +22,23 @@ export const NftGrid = ({ nftCompetitionData, isCarouselView }) => {
   );
 };
 const CustomNftGrid = styled.div`
-    display: grid;
-    grid-template-columns: ${props => props.templateColumn(49)};
-    overflow-x: scroll;
-    &::-webkit-scrollbar {
-      height: 4px;
-    }
-    &::-webkit-scrollbar-thumb {
-      background-color: #e70707;
-      border-radius: 25px;
-    }
-    @media (min-width: 768px) {
-      grid-template-columns: ${props => props.templateColumn(32)};
-      column-gap: 8px;
-      margin-left: 8px;
-    }
+  display: grid;
+  grid-template-columns: ${(props) => props.templateColumn(49)};
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #e70707;
+    border-radius: 25px;
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: ${(props) => props.templateColumn(32)};
+    column-gap: 8px;
+    margin-left: 8px;
+  }
 
-    @media (min-width: 1024px) {
-      grid-template-columns: ${props => props.templateColumn(19.5)};
-    }
-  `;
+  @media (min-width: 1024px) {
+    grid-template-columns: ${(props) => props.templateColumn(19.5)};
+  }
+`;
