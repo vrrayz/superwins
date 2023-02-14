@@ -92,11 +92,12 @@ export const Home = () => {
           </ChatInfo>
         </ChatsSection>
         <InputSection>
-        <ChatInput placeholder="Send a message" />
-        <SendMessageButton>
-        <i className="fa-regular fa-paper-plane"></i>
-        </SendMessageButton>
+          <ChatInput placeholder="Send a message" />
+          <SendMessageButton>
+            <i className="fa-regular fa-paper-plane"></i>
+          </SendMessageButton>
         </InputSection>
+        <PlayersCountSection><i className="fa-solid fa-circle text-success"></i> 108 players online</PlayersCountSection>
       </LiveChatContainer>
     </HomeContainer>
   );
@@ -112,7 +113,7 @@ const LiveChatContainer = styled.aside`
   display: none;
   @media (min-width: 1200px) {
     display: grid;
-    grid-template-rows: 1fr 50px 20px;
+    grid-template-rows: 1fr 50px 40px;
     row-gap: 12px;
     background-color: var(--color-dark-3);
     position: fixed;
@@ -130,8 +131,8 @@ const ChatsSection = styled.section`
 `;
 const InputSection = styled.section`
   padding: 0px 16px;
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
 `;
 const ChatInfo = styled.div`
   display: flex;
@@ -143,37 +144,43 @@ const ChatInfo = styled.div`
   }
 `;
 const Message = styled.p`
-font-size: 0.85rem;
-line-height: 1.2;
-color: var(--color-light-1)
-`
+  font-size: 0.85rem;
+  line-height: 1.2;
+  color: var(--color-light-1);
+`;
 const User = styled.h5`
-font-size: 1rem;
-font-weight:bold;
-color: var(--color-primary-red)
-`
-const ChatInput = styled.input `
-margin-right: 0px;
-width: 100%;
-border-top-left-radius: 25px;
-border-bottom-left-radius: 25px;
-border:none;
-background-color: var(--color-grey-1);
-color: var(--color-light-1);
-padding: 4px;
-padding-left: 16px;
-font-size: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-primary-red);
+`;
+const ChatInput = styled.input`
+  margin-right: 0px;
+  width: 100%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border: none;
+  background-color: var(--color-grey-1);
+  color: var(--color-light-1);
+  padding: 4px;
+  padding-left: 16px;
+  font-size: 14px;
 
-&:focus-visible{
-  border:none;
-  outline:none;
-}
-`
+  &:focus-visible {
+    border: none;
+    outline: none;
+  }
+`;
 const SendMessageButton = styled.button`
-border-top-right-radius: 25px;
-border-bottom-right-radius: 25px;
-border:none;
-background-color: var(--color-grey-1);
-padding-right: 16px;
-color: var(--color-light-1)
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: none;
+  background-color: var(--color-grey-1);
+  padding-right: 16px;
+  color: var(--color-light-1);
+`;
+const PlayersCountSection = styled.p`
+color: var(--color-light-1);
+font-size: 14px;
+margin: 0px 16px;
+// margin-top: 4px;
 `
