@@ -29,7 +29,7 @@ const CustomNftGrid = styled.div`
     height: 4px;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: #e70707;
+    background-color: var(--color-primary-red);
     border-radius: 25px;
   }
   @media (min-width: 768px) {

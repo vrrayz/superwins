@@ -46,11 +46,11 @@ export const CompletedSection = ({nftCompetitionData}) => {
   `;
   const InnerTabItem = styled.div`
     text-transform: uppercase;
-    color: #fff;
+    color: var(--color-light-1);
     font-size: 14px;
   
     &.active {
-      color: #e70707;
+      color: var(--color-primary-red);
     }
   `;
   

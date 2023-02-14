@@ -108,7 +108,7 @@ export const ActivitySection = () => {
 };
 const ListGroupItem = styled.div`
   display: grid;
-  color: #fff;
+  color: var(--color-light-1);
   font-size: 14px;
   margin: 8px 16px;
   padding: 12px 0px;
@@ -140,7 +140,7 @@ const CompetitionEnteries = styled.span`
   color: #aaa;
   .entries {
     font-weight: bold;
-    color: #fff;
+    color: var(--color-light-1);
   }
 `;
 const UserAvatarSection = styled.div`

@@ -17,7 +17,7 @@ export const GridSection = ({
     font-size: 12px;
     border: none;
     outline: none;
-    color: #fff;
+    color: var(--color-light-1);
     background-color: transparent;
   `;
   return (

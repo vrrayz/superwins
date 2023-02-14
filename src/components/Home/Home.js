@@ -67,6 +67,11 @@ const LiveChatContainer = styled.aside`
 display:none;
 @media (min-width: 1200px){
   display:block;
-  background-color: #fff;
+  background-color: var(--color-dark-3);
+  position:fixed;
+  right:0;
+  top:0;
+  width: 280px;
+  height: 100vh;
 }
 `

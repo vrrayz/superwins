@@ -12,7 +12,7 @@ export const Footer = ({logo}) => {
   const CopyRightSection = styled.div`
   margin:32px auto;
   text-align:center;
-  color: #fff;
+  color: var(--color-light-1);
   text-transform:uppercase;
   line-height:1.3;
   font-size:12px;
