@@ -2,15 +2,25 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css);
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
+:root{
+  --color-dark-1:#000;
+  --color-dark-2: #202633;
+  --color-dark-3: #141820;
+  --color-grey-1: #3b4151;
+  --color-primary-red: #e70707;
+  --color-light-1: #fff;
+  --color-border-primary-red: rgb(174, 47, 47);
+}
+
 body {
-  background-color: #000;
+  background-color: var(--color-dark-1);
   font-family: 'Play', sans-serif;
 }
 
 .loading-overlay {
   width: 100vw;
   height: 100vh;
-  background-color: #202633;
+  background-color: var(--color-dark-2);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,7 +71,7 @@ body {
 
 .toggle-lines {
   width: 1.5rem;
-  border: 1.5px solid #fff;
+  border: 1.5px solid var(--color-light-1);
   transition: .3s;
 }
 
@@ -95,11 +105,11 @@ body {
 }
 
 .bg-dark {
-  background-color: #000 !important;
+  background-color: var(--color-dark-1) !important;
 }
 
 .navbar {
-  border-bottom: 1.5px solid #e70707;
+  border-bottom: 1.5px solid var(--color-primary-red);
 }
 
 .navbar-brand {
@@ -128,7 +138,7 @@ header.menu-container.open-menu {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  background-color: #000;
+  background-color: var(--color-dark-1);
   flex-grow: 1;
   opacity: 0;
   animation-name: fadeIn;
@@ -161,7 +171,7 @@ header.menu-container.open-menu {
 }
 
 .menubar .menu-list a.menubar-item {
-  color: #fff;
+  color: var(--color-light-1);
 }
 
 .menu-list.top-section .menubar-item {
@@ -187,7 +197,7 @@ header.menu-container.open-menu {
 }
 
 i.glow {
-  color: #e70707;
+  color: var(--color-primary-red);
   text-shadow: 0px 0px 5px #cb0707;
 }
 
@@ -209,15 +219,15 @@ a {
 
 .btn-primary-transparent {
   background-color: rgba(231, 7, 7, .1);
-  border: 3px solid rgb(174, 47, 47);
-  color: #fff;
+  border: 3px solid var(--color-border-primary-red);
+  color: var(--color-light-1);
 
 }
 
 .btn-primary-transparent:hover,
 .btn-primary-transparent:active {
   background-color: rgba(231, 7, 7, .6) !important;
-  border: 3px solid rgb(174, 47, 47) !important;
+  border: 3px solid var(--color-border-primary-red) !important;
 }
 
 .brand-icon {
@@ -231,7 +241,7 @@ a {
   position: fixed;
   top: 0;
   background-color: rgba(20, 7, 7, .8);
-  color: #fff;
+  color: var(--color-light-1);
   width: 100vw;
   height: 100vh;
   z-index: 10000;
@@ -273,7 +283,7 @@ a {
 }
 
 .modal-body .wallet-options {
-  background-color: #3b4151;
+  background-color: var(--color-grey-1);
   border-radius: 25px;
   margin: 16px 0px;
 }
@@ -281,7 +291,7 @@ a {
 .wallet-options .wallet-option {
   display: flex;
   padding: 16px 0px;
-  border-bottom: 1px solid #202633;
+  border-bottom: 1px solid var(--color-dark-2);
 }
 
 .wallet-option img {
@@ -301,7 +311,7 @@ a {
 
 .custom-btn-close {
 
-  background-color: #3b4151;
+  background-color: var(--color-grey-1);
   border-radius: 50%;
   padding: 0px 14px 3px 14px !important;
   text-align: center;
@@ -317,7 +327,7 @@ a {
 
 /* *************** TABS *************** */
 .tabs {
-  color: #fff;
+  color: var(--color-light-1);
   display: flex;
   justify-content: space-between;
   padding: 0px 16px;
@@ -329,7 +339,7 @@ a {
   font-size: 14px;
   padding: 16px 0px;
   text-decoration: none;
-  color: #fff;
+  color: var(--color-light-1);
   /* letter-spacing: px; */
 }
 @media (min-width:768px){
@@ -339,19 +349,19 @@ a {
     padding: 16px 0px;
     margin: 0px 12px;
     text-decoration: none;
-    color: #fff;
+    color: var(--color-light-1);
     /* letter-spacing: px; */
   }
 }
 
 .tabs .tab-item:active,
 .tabs .tab-item.active {
-  color: #e70707;
+  color: var(--color-primary-red);
 }
 
 .badge {
   color: #707177;
-  background-color: #fff;
+  background-color: var(--color-light-1);
   font-size: 14px;
   border-radius: 25px;
   padding: 4px 8px;
@@ -361,28 +371,28 @@ a {
   position: relative;
   bottom: 5px;
   right: 1px;
-  background-color: #e70707;
-  color: #fff;
+  background-color: var(--color-primary-red);
+  color: var(--color-light-1);
   border-radius: 50%;
   padding: 2px;
   font-size: 12px;
 }
 
 .info {
-  background-color: #141820;
+  background-color: var(--color-dark-3);
   border-radius: 4px;
 }
 
 .info-text {
   padding: 6px 8px;
   font-size: 0.8rem;
-  color: #fff;
+  color: var(--color-light-1);
   text-align: center;
 }
 
 .section-heading {
   text-transform: uppercase;
-  color: #fff;
+  color: var(--color-light-1);
   letter-spacing: 1px;
   font-weight: 600;
   font-size: 1.2rem;
@@ -429,10 +439,10 @@ a {
 }
 
 .badge.time_left {
-  background-color: #e70707;
+  background-color: var(--color-primary-red);
   text-transform: uppercase;
   font-size: 12px;
-  color: #fff;
+  color: var(--color-light-1);
 }
 
 h5.nft_heading {
