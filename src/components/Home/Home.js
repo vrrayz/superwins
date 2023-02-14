@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import { tabData } from "../../data/tabData";
 import { nftCompetitionData } from "../../data/nftCompetitionData";
+import avatarImg from "../../assets/img/avatars/default.png";
 
 import { Tabs } from "../Tabs/Tabs";
 import { LiveSection } from "./LiveSection";
@@ -52,26 +53,81 @@ export const Home = () => {
         )}
         {tabs.activity && <ActivitySection />}
       </div>
-      <LiveChatContainer></LiveChatContainer>
+      <LiveChatContainer>
+        <ChatsSection>
+          <ChatInfo>
+            <img src={avatarImg} alt="user" className="mt-1" />
+            <div>
+              <User className="mb-1">noobsage</User>
+              <Message>This is my message to everyone on this platform</Message>
+            </div>
+          </ChatInfo>
+          <ChatInfo>
+            <img src={avatarImg} alt="user" className="mt-1" />
+            <div>
+              <User className="mb-1">noobsage</User>
+              <Message>This is my message to everyone on this platform</Message>
+            </div>
+          </ChatInfo>
+          <ChatInfo>
+            <img src={avatarImg} alt="user" className="mt-1" />
+            <div>
+              <User className="mb-1">noobsage</User>
+              <Message>This is my message to everyone on this platform</Message>
+            </div>
+          </ChatInfo>
+        </ChatsSection>
+        <InputSection></InputSection>
+      </LiveChatContainer>
     </HomeContainer>
   );
 };
 
 const HomeContainer = styled.div`
-@media (min-width: 1200px){
-  display:grid;
-  grid-template-columns: 1fr 280px;
-}
-`
+  @media (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+  }
+`;
 const LiveChatContainer = styled.aside`
-display:none;
-@media (min-width: 1200px){
-  display:block;
-  background-color: var(--color-dark-3);
-  position:fixed;
-  right:0;
-  top:0;
-  width: 280px;
-  height: 100vh;
-}
+  display: none;
+  @media (min-width: 1200px) {
+    display: grid;
+    grid-template-rows: 1fr 140px;
+    row-gap: 12px;
+    background-color: var(--color-dark-3);
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 320px;
+    height: 100vh;
+  }
+`;
+const ChatsSection = styled.section`
+  padding: 0px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+`;
+const InputSection = styled.section`
+  // background-color: #f00;
+`;
+const ChatInfo = styled.div`
+  display: flex;
+  column-gap: 8px;
+  img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+  }
+`;
+const Message = styled.p`
+font-size: 0.85rem;
+line-height: 1.2;
+color: var(--color-light-1)
+`
+const User = styled.h5`
+font-size: 1rem;
+font-weight:bold;
+color: var(--color-primary-red)
 `
