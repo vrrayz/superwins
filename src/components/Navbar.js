@@ -8,7 +8,7 @@ import styled from "styled-components";
 export const Navbar = ({ setConnectWalletModal, logo }) => {
   const [isMenuBarToggled, setIsMenuBarToggled] = useState(false);
   const CustomNav = styled.nav`
-    ${!isMenuBarToggled && `backdrop-filter: blur(6px); background-color: rgba(0, 0, 0, 0.9) !important;`}
+    ${!isMenuBarToggled && `backdrop-filter: blur(6px); background-color: var(--color-transparent-dark) !important;`}
   `;
 
   return (
