@@ -1,0 +1,50 @@
+export const competitionActivityData = [
+    {
+        id: 1,
+        reward: "Kubz",
+        mintNo: "#3126",
+        username: "ridaz",
+        entriesPurchased: 1,
+        timestamp: "3 minutes ago",
+    },
+    {
+        id: 2,
+        reward: "1 ETH",
+        mintNo: "",
+        username: "ridaz",
+        entriesPurchased: 20,
+        timestamp: "4 minutes ago",
+    },
+    {
+        id: 3,
+        reward: "RENGA",
+        mintNo: "#4646",
+        username: "TheDon",
+        entriesPurchased: 9,
+        timestamp: "6 minutes ago",
+    },
+    {
+        id: 4,
+        reward: "20 ETH",
+        mintNo: "",
+        username: "Syndaesia",
+        entriesPurchased: 1,
+        timestamp: "7 minutes ago",
+    },
+    {
+        id: 5,
+        reward: "1 ETH",
+        mintNo: "",
+        username: "Syndaesia",
+        entriesPurchased: 9,
+        timestamp: "10 minutes ago",
+    },
+    {
+        id: 6,
+        reward: "Valhalla",
+        mintNo: "#8278",
+        username: "nobody.eth",
+        entriesPurchased: 2,
+        timestamp: "10 minutes ago",
+    }
+]

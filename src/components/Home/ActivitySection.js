@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import rewardImg from "../../assets/img/rewards/eth-1.png";
 import avatarImg from "../../assets/img/avatars/default.png";
+import { competitionActivityData } from "../../data/competitionActivityData";
 import { Link } from "react-router-dom";
 import { InnerTab } from "./InnerTab";
 import { useState } from "react";
@@ -24,7 +25,7 @@ export const ActivitySection = () => {
             <span>Entries Purchased</span>
             <span>Time</span>
           </>
-        ):(
+        ) : (
           <>
             <span>Game</span>
             <span>User</span>
@@ -34,41 +35,44 @@ export const ActivitySection = () => {
           </>
         )}
       </ListGroupItem>
-      <ListGroupItem>
-        <ListData>
-          <CompetitionRewardSection>
-            <img src={rewardImg} alt="reward" />
-            <span>
-              1 Eth
-              <i className="fa-solid fa-circle-check ms-1 text-primary"></i>
-            </span>
-          </CompetitionRewardSection>
-          <CompetitionEnteries>
-            Entries <span className="entries">20</span>
-          </CompetitionEnteries>
-        </ListData>
-        <ListData>
-          <UserAvatarSection>
-            <img src={avatarImg} alt="avatar" />
-            <span>SuperRyan</span>
-          </UserAvatarSection>
-          <div className="text-center">
-            <Link to={"/"} className="timestamp">
-              30 minutes ago{" "}
-              <i className="fa-solid fa-arrow-up-right-from-square"></i>
-            </Link>
-          </div>
-        </ListData>
-        <ListData className="my-auto">
-          <span className="entries">20</span>
-        </ListData>
-        <ListData className="my-auto">
-          <Link to={"/"} className="timestamp">
-            30 minutes ago{" "}
-            <i className="fa-solid fa-arrow-up-right-from-square"></i>
-          </Link>
-        </ListData>
-      </ListGroupItem>
+      {isActivity &&
+        competitionActivityData.map((comp) => (
+            <ListGroupItem isActivity={isActivity}>
+              <ListData>
+                <CompetitionRewardSection>
+                  <img src={rewardImg} alt="reward" />
+                  <span>
+                    1 Eth
+                    <i className="fa-solid fa-circle-check ms-1 text-primary"></i>
+                  </span>
+                </CompetitionRewardSection>
+                <CompetitionEnteries>
+                  Entries <span className="entries">20</span>
+                </CompetitionEnteries>
+              </ListData>
+              <ListData>
+                <UserAvatarSection>
+                  <img src={avatarImg} alt="avatar" />
+                  <span>SuperRyan</span>
+                </UserAvatarSection>
+                <div className="text-center">
+                  <Link to={"/"} className="timestamp">
+                    30 minutes ago{" "}
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                  </Link>
+                </div>
+              </ListData>
+              <ListData className="my-auto">
+                <span className="entries">20</span>
+              </ListData>
+              <ListData className="my-auto">
+                <Link to={"/"} className="timestamp">
+                  30 minutes ago{" "}
+                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                </Link>
+              </ListData>
+            </ListGroupItem>
+        ))}
     </>
   );
 };
@@ -78,16 +82,17 @@ const ListGroupItem = styled.div`
   font-size: 14px;
   margin: 8px 16px;
   padding: 12px 0px;
-  grid-template-columns: ${({isActivity}) => isActivity ? `50% 50%`: `1fr 1fr 1fr 1fr 1fr`};
+  grid-template-columns: ${({ isActivity }) => isActivity ? `50% 50%` : `1fr 1fr 1fr 1fr 1fr`};
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
   span:nth-child(n + 3),
-  div:nth-child(nt + 3) {
+  div:nth-child(n + 3) {
     display: none;
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr ${({isActivity}) => isActivity ? ``: `1fr`};
+    grid-template-columns: 1fr 1fr 1fr 1fr ${({ isActivity }) =>
+        isActivity ? `` : `1fr`};
     text-align: center;
 
     span:nth-child(n + 2) {
