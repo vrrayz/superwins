@@ -56,7 +56,7 @@ export const LiveChat = ({ isChatToggled }) => {
 };
 const LiveChatContainer = styled.aside`
   display: ${({isChatToggled}) => isChatToggled ? `grid`:`none` };
-  grid-template-rows: 1fr 50px 40px;
+  grid-template-rows: 1fr 50px 50px;
   row-gap: 12px;
   background-color: var(--color-transparent-dark);
   backdrop-filter:blur(10px);
@@ -66,6 +66,8 @@ const LiveChatContainer = styled.aside`
   width: 100%;
   height: 100vh;
   z-index: 10000;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
   @media (min-width: 768px){
     max-width: 320px;
   }

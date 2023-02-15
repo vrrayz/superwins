@@ -80,6 +80,8 @@ const ToggleChatButton = styled.button`
   background-color: ${({isChatToggled}) => isChatToggled ? `var(--color-dark-2)`:`var(--color-primary-red)`};
   color: var(--color-light-1);
   z-index: 10000;
+  transition: 100ms;
+  transition-timing-function: ease-in-out;
   @media (min-width: 1200px) {
     display: none;
   }
