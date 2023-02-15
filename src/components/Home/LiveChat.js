@@ -1,69 +1,80 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import avatarImg from "../../assets/img/avatars/default.png";
 
-export const LiveChat = () => {
+export const LiveChat = ({ isChatToggled, setChat }) => {
   return (
     <LiveChatContainer>
-        <ChatsSection>
-          <ChatInfo>
-            <img src={avatarImg} alt="user" className="mt-1" />
-            <div>
-              <User className="mb-1">noobsage</User>
-              <Message>This is my message to everyone on this platform</Message>
-            </div>
-          </ChatInfo>
-          <ChatInfo>
-            <img src={avatarImg} alt="user" className="mt-1" />
-            <div>
-              <User className="mb-1">noobsage</User>
-              <Message>This is my message to everyone on this platform</Message>
-            </div>
-          </ChatInfo>
-          <ChatInfo>
-            <img src={avatarImg} alt="user" className="mt-1" />
-            <div>
-              <User className="mb-1">noobsage</User>
-              <Message>This is my message to everyone on this platform</Message>
-            </div>
-          </ChatInfo>
-          <ChatInfo>
-            <img src={avatarImg} alt="user" className="mt-1" />
-            <div>
-              <User className="mb-1">noobsage</User>
-              <Message>This is my message to everyone on this platform</Message>
-            </div>
-          </ChatInfo>
-          <ChatInfo>
-            <img src={avatarImg} alt="user" className="mt-1" />
-            <div>
-              <User className="mb-1">noobsage</User>
-              <Message>This is my message to everyone on this platform</Message>
-            </div>
-          </ChatInfo>
-        </ChatsSection>
-        <InputSection>
-          <ChatInput placeholder="Send a message" />
-          <SendMessageButton>
-            <i className="fa-regular fa-paper-plane"></i>
-          </SendMessageButton>
-        </InputSection>
-        <PlayersCountSection><i className="fa-solid fa-circle text-success"></i> 108 players online</PlayersCountSection>
-      </LiveChatContainer>
-  )
-}
+      <ChatsSection>
+        <ChatInfo>
+          <img src={avatarImg} alt="user" className="mt-1" />
+          <div>
+            <User className="mb-1">noobsage</User>
+            <Message>This is my message to everyone on this platform</Message>
+          </div>
+        </ChatInfo>
+        <ChatInfo>
+          <img src={avatarImg} alt="user" className="mt-1" />
+          <div>
+            <User className="mb-1">noobsage</User>
+            <Message>This is my message to everyone on this platform</Message>
+          </div>
+        </ChatInfo>
+        <ChatInfo>
+          <img src={avatarImg} alt="user" className="mt-1" />
+          <div>
+            <User className="mb-1">noobsage</User>
+            <Message>This is my message to everyone on this platform</Message>
+          </div>
+        </ChatInfo>
+        <ChatInfo>
+          <img src={avatarImg} alt="user" className="mt-1" />
+          <div>
+            <User className="mb-1">noobsage</User>
+            <Message>This is my message to everyone on this platform</Message>
+          </div>
+        </ChatInfo>
+        <ChatInfo>
+          <img src={avatarImg} alt="user" className="mt-1" />
+          <div>
+            <User className="mb-1">noobsage</User>
+            <Message>This is my message to everyone on this platform</Message>
+          </div>
+        </ChatInfo>
+      </ChatsSection>
+      <InputSection>
+        <ChatInput placeholder="Send a message" />
+        <SendMessageButton>
+          <i className="fa-regular fa-paper-plane"></i>
+        </SendMessageButton>
+      </InputSection>
+      <PlayersCountSection>
+        <i className="fa-solid fa-circle text-success"></i> 108 players online
+      </PlayersCountSection>
+    </LiveChatContainer>
+  );
+};
 const LiveChatContainer = styled.aside`
-  display: none;
+  display: grid;
+  grid-template-rows: 1fr 50px 40px;
+  row-gap: 12px;
+  background-color: var(--color-transparent-dark);
+  backdrop-filter:blur(10px);
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+  @media (min-width: 768px){
+    max-width: 320px;
+  }
   @media (min-width: 1200px) {
     display: grid;
-    grid-template-rows: 1fr 50px 40px;
-    row-gap: 12px;
     background-color: var(--color-dark-3);
     position: fixed;
     right: 0;
     top: 0;
-    width: 320px;
-    height: 100vh;
   }
 `;
 const ChatsSection = styled.section`
@@ -122,8 +133,7 @@ const SendMessageButton = styled.button`
   color: var(--color-light-1);
 `;
 const PlayersCountSection = styled.p`
-color: var(--color-light-1);
-font-size: 14px;
-margin: 0px 16px;
-// margin-top: 4px;
-`
+  color: var(--color-light-1);
+  font-size: 14px;
+  margin: 0px 16px;
+`;
