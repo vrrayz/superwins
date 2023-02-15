@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
 :root{
+  --color-transparent-dark: rgba(0, 0, 0, 0.9);
   --color-dark-1:#000;
   --color-dark-2: #202633;
   --color-dark-3: #141820;
@@ -126,7 +127,7 @@ header.menu-container {
   position: fixed;
   width: 100vw;
   top: 0;
-  z-index: 100;
+  z-index: 10001;
 }
 
 header.menu-container.open-menu {
