@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import avatarImg from "../../assets/img/avatars/default.png";
 
-export const LiveChat = ({ isChatToggled, setChat }) => {
+export const LiveChat = ({ isChatToggled }) => {
   return (
-    <LiveChatContainer>
+    <LiveChatContainer isChatToggled={isChatToggled}>
       <ChatsSection>
         <ChatInfo>
           <img src={avatarImg} alt="user" className="mt-1" />
@@ -55,7 +55,7 @@ export const LiveChat = ({ isChatToggled, setChat }) => {
   );
 };
 const LiveChatContainer = styled.aside`
-  display: grid;
+  display: ${({isChatToggled}) => isChatToggled ? `grid`:`none` };
   grid-template-rows: 1fr 50px 40px;
   row-gap: 12px;
   background-color: var(--color-transparent-dark);
