@@ -4,15 +4,35 @@ import styled from "styled-components";
 import rewardImg from "../../assets/img/rewards/eth-1.png";
 import avatarImg from "../../assets/img/avatars/default.png";
 import { Link } from "react-router-dom";
+import { InnerTab } from "./InnerTab";
+import { useState } from "react";
 
 export const ActivitySection = () => {
+  const [isActivity, setIsActivity] = useState(true);
   return (
     <>
-      <ListGroupItem className="list-header">
-        <span>Competition</span>
-        <span>Username</span>
-        <span>Entries Purchased</span>
-        <span>Time</span>
+      <InnerTab
+        isFirstItem={isActivity}
+        setIsFirstItem={setIsActivity}
+        items={["Activity", "Games"]}
+      />
+      <ListGroupItem className="list-header" isActivity={isActivity}>
+        {isActivity ? (
+          <>
+            <span>Competition</span>
+            <span>Username</span>
+            <span>Entries Purchased</span>
+            <span>Time</span>
+          </>
+        ):(
+          <>
+            <span>Game</span>
+            <span>User</span>
+            <span>Action</span>
+            <span>Amount</span>
+            <span>Time</span>
+          </>
+        )}
       </ListGroupItem>
       <ListGroupItem>
         <ListData>
@@ -58,7 +78,7 @@ const ListGroupItem = styled.div`
   font-size: 14px;
   margin: 8px 16px;
   padding: 12px 0px;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: ${({isActivity}) => isActivity ? `50% 50%`: `1fr 1fr 1fr 1fr 1fr`};
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
   span:nth-child(n + 3),
@@ -67,7 +87,7 @@ const ListGroupItem = styled.div`
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr ${({isActivity}) => isActivity ? ``: `1fr`};
     text-align: center;
 
     span:nth-child(n + 2) {
