@@ -29,19 +29,3 @@ export const CompletedSection = ({ nftCompetitionData }) => {
     </>
   );
 };
-const InnerTabContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  column-gap: 16px;
-  margin-top: 32px;
-  margin-bottom: 16px;
-`;
-const InnerTabItem = styled.div`
-  text-transform: uppercase;
-  color: var(--color-light-1);
-  font-size: 14px;
-
-  &.active {
-    color: var(--color-primary-red);
-  }
-`;
