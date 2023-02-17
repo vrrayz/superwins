@@ -23,7 +23,7 @@ export const NftGridItem = ({id,imgSrc,mintNumber,timeLeft,name,value,totalParti
             <small>Value:</small>
             <span className="amount">${value}</span>
           </div>
-          <Link to={"/"} className="btn btn-primary d-block mb-3">
+          <Link to={`/competition/${id}`} className="btn btn-primary d-block mb-3">
             Enter Now
           </Link>
           <div className="nft-card-footer text-center mb-2">
