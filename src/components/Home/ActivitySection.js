@@ -37,49 +37,49 @@ export const ActivitySection = () => {
         )}
       </ListGroupItem>
       {isActivity &&
-        competitionActivityData.map((comp) => (
-          <ListGroupItem key={comp.id} className={`${isActivity && 'activity-list'}`} isActivity={isActivity}>
+        competitionActivityData.map(({id, reward,mintNo,username,entriesPurchased,timestamp}) => (
+          <ListGroupItem key={id} className={`${isActivity && 'activity-list'}`} isActivity={isActivity}>
             <ListData>
               <CompetitionRewardSection>
                 <img src={rewardImg} alt="reward" />
                 <span>
-                  1 Eth
+                  {reward}
                   <i className="fa-solid fa-circle-check ms-1 text-primary"></i>
                 </span>
               </CompetitionRewardSection>
-              <CompetitionEntries>Entries <span className="entries">20</span></CompetitionEntries>
+              <CompetitionEntries>Entries <span className="entries">{entriesPurchased}</span></CompetitionEntries>
             </ListData>
             <ListData>
               <UserAvatarSection>
                 <img src={avatarImg} alt="avatar" />
-                <span>SuperRyan</span>
+                <span>{username}</span>
               </UserAvatarSection>
               <div className="text-center">
                 <Link to={"/"} className="timestamp">
-                  30 minutes ago{" "}
+                  {timestamp}
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </Link>
               </div>
             </ListData>
             <ListData className="my-auto display-md-block">
-              <span className="entries">20</span>
+              <span className="entries">{entriesPurchased}</span>
             </ListData>
             <ListData className="my-auto display-md-block">
               <Link to={"/"} className="timestamp">
-                30 minutes ago{" "}
+                {timestamp}
                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
               </Link>
             </ListData>
           </ListGroupItem>
         ))}
       {!isActivity &&
-        competitionGameActivityData.map((comp) => (
-          <ListGroupItem key={comp.id} isActivity={isActivity}>
+        competitionGameActivityData.map(({id,name,username,action,amount,timestamp}) => (
+          <ListGroupItem key={id} isActivity={isActivity}>
             <ListData>
               <GameSection>
                 <img src={rewardImg} alt="reward" />
                 <span>
-                  Game Name
+                  {name}
                   <i className="fa-solid fa-circle-check ms-1 text-primary"></i>
                 </span>
               </GameSection>
@@ -87,18 +87,18 @@ export const ActivitySection = () => {
             <ListData>
               <UserSection>
                 <img src={avatarImg} alt="avatar" />
-                <span>SuperRyan</span>
+                <span>{username}</span>
               </UserSection>
             </ListData>
             <ListData>
-              <span className="entries">BET</span>
+              <span className={`fw-bold ${action === 'WIN' ? 'text-success':'text-warning'}`}>{action}</span>
             </ListData>
             <ListData>
-              <span>0.001</span>
+              <span>{amount}</span>
             </ListData>
             <ListData>
             <Link to={"/"} className="timestamp">
-                30 minutes ago{" "}
+                {timestamp}
                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
               </Link>
             </ListData>
