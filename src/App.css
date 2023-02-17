@@ -8,9 +8,11 @@
   --color-dark-2: #202633;
   --color-dark-3: #141820;
   --color-grey-1: #3b4151;
+  --color-grey-2: #787f94;
   --color-primary-red: #e70707;
   --color-light-1: #fff;
   --color-border-primary-red: rgb(174, 47, 47);
+  --color-blue-1: #0d6efd;
 }
 
 body {
