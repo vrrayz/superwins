@@ -1,10 +1,11 @@
 import React from 'react'
 import { InfoSection } from '../InfoSection'
+import { MainContainer } from '../MainContainer'
 
 export const Competition = () => {
   return (
-    <div>
+    <MainContainer>
         <InfoSection />
-    </div>
+    </MainContainer>
   )
 }
