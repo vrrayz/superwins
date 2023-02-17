@@ -31,6 +31,7 @@ const InnerTabItem = styled.div`
 text-transform: uppercase;
 color: var(--color-light-1);
 font-size: 14px;
+cursor: pointer;
 
 &.active {
   color: var(--color-primary-red);
