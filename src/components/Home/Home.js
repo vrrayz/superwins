@@ -7,7 +7,8 @@ import { Tabs } from "../Tabs/Tabs";
 import { LiveSection } from "./LiveSection";
 import { CompletedSection } from "./CompletedSection";
 import { ActivitySection } from "./ActivitySection";
-import styled from "styled-components";
+import { InfoSection } from "../InfoSection";
+import { MainContainer } from "../MainContainer";
 
 export const Home = () => {
   const [urlParams, setUrlParams] = useState(new URLSearchParams(""));
@@ -35,29 +36,16 @@ export const Home = () => {
   }, [urlParams]);
 
   return (
-    <HomeContainer>
+    <MainContainer>
       <div>
         <Tabs tabs={tabs} updateParams={updateParams} />
-        <section className="info-section px-3">
-          <div className="info">
-            <p className="info-text">
-              NEW Earn 2.5% on all user purchase from referrals
-            </p>
-          </div>
-        </section>
+        <InfoSection />
         {tabs.live && <LiveSection nftCompetitionData={nftCompetitionData} />}
         {tabs.completed && (
           <CompletedSection nftCompetitionData={nftCompetitionData} />
         )}
         {tabs.activity && <ActivitySection />}
       </div>
-    </HomeContainer>
+    </MainContainer>
   );
 };
-const HomeContainer = styled.div`
-  @media (min-width: 1200px) {
-    display: grid;
-    grid-template-columns: 1fr 320px;
-  }
-`;
-
