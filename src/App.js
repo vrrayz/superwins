@@ -9,6 +9,7 @@ import { Navbar } from "./components/Navbar";
 import "./App.css";
 import logo from "../src/assets/img/logo.png";
 import { Footer } from "./components/Footer/Footer";
+import { Competition } from "./components/Competition/Competition";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,6 +32,7 @@ function App() {
           )}
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/competition/:id" element={<Competition />} />
           </Routes>
           <Footer logo={logo} />
         </>
