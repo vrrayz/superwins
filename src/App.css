@@ -353,6 +353,12 @@ a {
     color: var(--color-light-1);
     /* letter-spacing: px; */
   }
+  .display-md-inline{
+    display: inline !important;
+  }
+  .display-md-block{
+    display: block !important;
+  }
 }
 
 .tabs .tab-item:active,

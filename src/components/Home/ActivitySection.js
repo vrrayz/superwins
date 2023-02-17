@@ -38,7 +38,7 @@ export const ActivitySection = () => {
       </ListGroupItem>
       {isActivity &&
         competitionActivityData.map((comp) => (
-          <ListGroupItem className={`${isActivity && 'activity-list'}`} isActivity={isActivity}>
+          <ListGroupItem key={comp.id} className={`${isActivity && 'activity-list'}`} isActivity={isActivity}>
             <ListData>
               <CompetitionRewardSection>
                 <img src={rewardImg} alt="reward" />
@@ -47,6 +47,7 @@ export const ActivitySection = () => {
                   <i className="fa-solid fa-circle-check ms-1 text-primary"></i>
                 </span>
               </CompetitionRewardSection>
+              <CompetitionEntries>Entries <span className="entries">20</span></CompetitionEntries>
             </ListData>
             <ListData>
               <UserAvatarSection>
@@ -60,10 +61,10 @@ export const ActivitySection = () => {
                 </Link>
               </div>
             </ListData>
-            <ListData className="my-auto">
+            <ListData className="my-auto display-md-block">
               <span className="entries">20</span>
             </ListData>
-            <ListData className="my-auto">
+            <ListData className="my-auto display-md-block">
               <Link to={"/"} className="timestamp">
                 30 minutes ago{" "}
                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
@@ -73,7 +74,7 @@ export const ActivitySection = () => {
         ))}
       {!isActivity &&
         competitionGameActivityData.map((comp) => (
-          <ListGroupItem isActivity={isActivity}>
+          <ListGroupItem key={comp.id} isActivity={isActivity}>
             <ListData>
               <GameSection>
                 <img src={rewardImg} alt="reward" />
@@ -89,14 +90,17 @@ export const ActivitySection = () => {
                 <span>SuperRyan</span>
               </UserSection>
             </ListData>
-            <ListData className="my-auto">
+            <ListData>
               <span className="entries">BET</span>
             </ListData>
-            <ListData className="my-auto">
+            <ListData>
               <span>0.001</span>
             </ListData>
-            <ListData className="my-auto">
-              <span>54 min ago</span>
+            <ListData>
+            <Link to={"/"} className="timestamp">
+                30 minutes ago{" "}
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              </Link>
             </ListData>
           </ListGroupItem>
         ))}
@@ -110,11 +114,10 @@ const ListGroupItem = styled.div`
   margin: 8px 16px;
   padding: 12px 0px;
   grid-template-columns: ${({ isActivity }) =>
-    isActivity ? `50% 50%` : `1fr 1fr 1fr 1fr 1fr`};
+    isActivity ? `50% 50%` : `1fr 2fr 1fr 1fr 1fr`};
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
-  &.activity-list span:nth-child(n + 3),
-  div:nth-child(n + 3) {
+  &.activity-list span:nth-child(n + 3), &.activity-list div:nth-child(n + 3) {
     display: none;
   }
 
@@ -123,7 +126,7 @@ const ListGroupItem = styled.div`
         isActivity ? `` : `1fr`};
     text-align: center;
 
-    span:nth-child(n + 2) {
+    &.activity-list span:nth-child(n + 2) {
       display: block;
     }
   }
@@ -149,11 +152,14 @@ const CompetitionRewardSection = styled.div`
     margin: auto 0px;
   }
 `;
-const CompetitionEnteries = styled.span`
+const CompetitionEntries = styled.span`
   color: #aaa;
   .entries {
     font-weight: bold;
     color: var(--color-light-1);
+  }
+  @media (min-width: 768px) {
+    display: none !important;
   }
 `;
 const UserAvatarSection = styled.div`
@@ -170,6 +176,7 @@ const UserAvatarSection = styled.div`
   }
 `;
 const ListData = styled.div`
+color: var(--color-light-1);
   @media (min-width: 768px) {
     & > span:nth-child(2),
     & > div:nth-child(2) {
@@ -188,6 +195,8 @@ span {
 @media (min-width: 768px) {
   span {
     display: inline;
+    font-size: 12px;
+    margin-left: 8px;
   }
 }
 `
@@ -196,5 +205,8 @@ display:flex;
 img {
   width: 20px;
   border-radius: 8px;
+}
+span{
+  text-overflow: ellipsis;
 }
 `
