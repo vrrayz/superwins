@@ -7,7 +7,7 @@ export const MainContainer = ({children}) => {
   )
 }
 const Container = styled.div`
-  margin-top: 4rem;
+  margin-top: 5rem;
   @media (min-width: 1200px) {
     display: grid;
     grid-template-columns: 1fr 320px;
