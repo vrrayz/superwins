@@ -426,14 +426,6 @@ a {
   }
 }
 
-.nft-card-image {
-  object-fit: cover;
-  height: 175px;
-  border-radius: 6px;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
 .nft-info {
   display: flex;
   justify-content: space-between;
