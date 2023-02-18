@@ -1,14 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { Link, useNavigate } from "react-router-dom";
 
-export const NftGridItem = ({id,imgSrc,mintNumber,timeLeft,name,value,totalParticipants,closeDate}) => {
+export const NftGridItem = ({
+  id,
+  imgSrc,
+  mintNumber,
+  timeLeft,
+  name,
+  value,
+  totalParticipants,
+  closeDate,
+}) => {
+  const navigate = useNavigate();
+
+  const redirect = () => navigate(`/competition/${id}`);
+
   return (
     <div className="grid-item">
       <div className="card nft-card border-0">
-        <img
+        <NftCardImage
           src={imgSrc}
-          className="card-image-top nft-card-image"
+          className="card-image-top"
           alt="nft_image"
+          onClick={redirect}
         />
         <div className="card-body py-1">
           <div className="nft-info">
@@ -23,7 +38,10 @@ export const NftGridItem = ({id,imgSrc,mintNumber,timeLeft,name,value,totalParti
             <small>Value:</small>
             <span className="amount">${value}</span>
           </div>
-          <Link to={`/competition/${id}`} className="btn btn-primary d-block mb-3">
+          <Link
+            to={`/competition/${id}`}
+            className="btn btn-primary d-block mb-3"
+          >
             Enter Now
           </Link>
           <div className="nft-card-footer text-center mb-2">
@@ -37,3 +55,12 @@ export const NftGridItem = ({id,imgSrc,mintNumber,timeLeft,name,value,totalParti
     </div>
   );
 };
+
+const NftCardImage = styled.img`
+  object-fit: cover;
+  height: 175px;
+  border-radius: 6px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  cursor: pointer;
+`;
