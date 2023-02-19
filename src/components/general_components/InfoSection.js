@@ -1,6 +1,6 @@
 import React from "react";
-import { CustomCard } from "./general_components/CustomCard";
-import { CustomCardText } from "./general_components/CustomCardText";
+import { CustomCard } from "./CustomCard";
+import { CustomCardText } from "./CustomCardText";
 
 export const InfoSection = () => {
   return (

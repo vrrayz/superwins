@@ -7,7 +7,7 @@ import { Tabs } from "../Tabs/Tabs";
 import { LiveSection } from "./LiveSection";
 import { CompletedSection } from "./CompletedSection";
 import { ActivitySection } from "./ActivitySection";
-import { InfoSection } from "../InfoSection";
+import { InfoSection } from "../general_components/InfoSection";
 import { MainContainer } from "../MainContainer";
 
 export const Home = () => {

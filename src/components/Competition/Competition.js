@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import { InfoSection } from "../InfoSection";
+import { InfoSection } from "../general_components/InfoSection";
 import { MainContainer } from "../MainContainer";
 
 import { nftCompetitionData } from "../../data/nftCompetitionData";
