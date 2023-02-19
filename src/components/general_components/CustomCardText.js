@@ -8,7 +8,7 @@ export const CustomCardText = ({children, className}) => {
 }
 const CardText = styled.p`
    {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     padding: 0px;
     margin: 0;
   }
