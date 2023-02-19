@@ -138,7 +138,7 @@ export const Competition = () => {
               </EntryGridItem>
             </EntryGrid>
             <EntryGridItem className="pt-5 my-2 max">
-                <MaxValueLabel>Max Value</MaxValueLabel>
+              <MaxValueLabel>Max Value</MaxValueLabel>
               <DiscountSection>
                 <SlashedPrice>40</SlashedPrice>
                 <EntryCount className="discount-text">155</EntryCount>
@@ -153,15 +153,27 @@ export const Competition = () => {
               </PromoText>
               <SubText>Gas saving = 35x</SubText>
             </EntryGridItem>
-            <ExtraInfoText className="text-center my-3">All entries require gas.</ExtraInfoText>
-            <ExtraInfoText className="text-center mt-3 mb-0">Smart Contract v1.2 update</ExtraInfoText>
-            <ExtraInfoText className="text-light text-center my-0 mb-3">Multi Buy Gas Amount = Single Entry Gas Amount</ExtraInfoText>
+            <ExtraInfoText className="text-center my-3">
+              All entries require gas.
+            </ExtraInfoText>
+            <ExtraInfoText className="text-center mt-3 mb-0">
+              Smart Contract v1.2 update
+            </ExtraInfoText>
+            <ExtraInfoText className="text-light text-center my-0 mb-3">
+              Multi Buy Gas Amount = Single Entry Gas Amount
+            </ExtraInfoText>
           </CustomCard>
 
-          <CustomCard>
-            <Link to={'/'} className="text-light">
-                <ExtraInfoText><span style={{color: 'var(--color-blue-1)'}}>Contract</span> <span className="text-light">0x4D6283B4198C0039F2ADdc6A8784Bbdef6e259EB</span></ExtraInfoText>
-            </Link>
+          <CustomCard className='py-2'>
+            <FlexBetweenContainer style={{fontSize: '.8rem'}}>
+              <span style={{ color: "var(--color-blue-1)" }} className="me-1">Contract</span>
+              <Link to={'/'} className="text-light" style={{overflow: 'hidden', textOverflow: 'ellipsis'}}>
+                0x4D6283B4198C0039F2ADdc6A8784Bbdef6e259EB
+              </Link>
+              <Link to={'/'} className="text-light mx-0 mt-1" style={{overflow: 'hidden', textOverflow: 'ellipsis',fontSize: '.5rem'}}>
+              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              </Link>
+            </FlexBetweenContainer>
           </CustomCard>
         </SectionWrapper>
       </div>

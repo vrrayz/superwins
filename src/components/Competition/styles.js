@@ -24,6 +24,7 @@ export const CompetitionHeading = styled.h5`
 export const FlexBetweenContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  text-overflow: ellipsis;
 `;
 export const FlexStartContainer = styled.div`
   display: flex;
