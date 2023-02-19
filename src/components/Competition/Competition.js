@@ -2,12 +2,24 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { InfoSection } from "../general_components/InfoSection";
 import { MainContainer } from "../MainContainer";
+import { SectionWrapper } from "../general_components/SectionWrapper";
+import { CustomCard } from "../general_components/CustomCard";
 
 import { nftCompetitionData } from "../../data/nftCompetitionData";
 import { useEffect } from "react";
 import { useState } from "react";
-import styled from "styled-components";
-import { SectionWrapper } from "../general_components/SectionWrapper";
+import {
+  CompetitionImage,
+  CompetitionHeading,
+  FlexBetweenContainer,
+  FlexStartContainer,
+  NftValue,
+  Divider,
+  Icon,
+  CloseDate,
+  CompetitionDescription,
+} from "./styles";
+import { CustomCardText } from "../general_components/CustomCardText";
 
 export const Competition = () => {
   const { id } = useParams();
@@ -47,64 +59,17 @@ export const Competition = () => {
           </CompetitionDescription>
         </SectionWrapper>
         <SectionWrapper>
-            
+          <CustomCard>
+            <h3 className="text-center mt-2 text-uppercase">
+              Enter Competition
+            </h3>
+            <CustomCardText className="text-center my-4">
+              You have used <span className="text-danger">0</span> of{" "}
+              <span className="text-danger">465</span> entries
+            </CustomCardText>
+          </CustomCard>
         </SectionWrapper>
       </div>
     </MainContainer>
   );
 };
-
-const CompetitionImage = styled.img`
-  width: 100%;
-  max-width: 340px;
-  height: 320px;
-  display: block;
-  margin: auto;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 12px;
-`;
-const CompetitionHeading = styled.h5`
-  font-weight: bold;
-  color: var(--color-light-1);
-  margin: 8px 0px;
-  margin-bottom: 4px;
-  i.fa-solid {
-    font-size: 14px;
-  }
-`;
-const FlexBetweenContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-const FlexStartContainer = styled.div`
-  display: flex;
-  justify-content: start;
-`;
-const NftValue = styled.span`
-  color: var(--color-light-1);
-  font-size: 12px;
-  span {
-    font-weight: bold;
-    font-size: 18px;
-  }
-`;
-const Divider = styled.hr`
-  color: var(--color-grey-1);
-  margin: 0;
-  opacity: 1;
-`;
-const Icon = styled.i`
-  color: var(--color-blue-1);
-  font-size: 18px;
-`;
-const CloseDate = styled.span`
-  font-size: 12px;
-  color: var(--color-light-1);
-  text-transform: uppercase;
-`;
-const CompetitionDescription = styled.p`
-color: var(--color-grey-2);
-padding: 8px 0px;
-font-size: 14px;
-`
