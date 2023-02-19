@@ -7,7 +7,7 @@
   --color-dark-1:#000;
   --color-dark-2: #202633;
   --color-dark-3: #20141c;
-  --color-primary-dark-1: #2a1320;
+  --color-primary-darkgrey-1: #3a1b27;
   --color-grey-1: #3b4151;
   --color-grey-2: #787f94;
   --color-primary-red: #e70707;
@@ -428,7 +428,7 @@ a {
 }
 
 .badge.time_left {
-  background-color: var(--color-primary-red);
+  background-color: var(--color-blue-1);
   text-transform: uppercase;
   font-size: 12px;
   color: var(--color-light-1);

@@ -59,7 +59,7 @@ display: grid;
 grid-template-columns: 50% 50%;
 `
 export const EntryGridItem = styled.div`
-background-color: var(--color-primary-dark-1);
+background-color: var(--color-primary-darkgrey-1);
 padding: 8px 16px;
 text-align:center;
 `
