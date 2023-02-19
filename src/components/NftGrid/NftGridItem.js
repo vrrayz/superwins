@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
+import { Button } from "../general_components/Button";
 
 export const NftGridItem = ({
   id,
@@ -38,12 +39,13 @@ export const NftGridItem = ({
             <small>Value:</small>
             <span className="amount">${value}</span>
           </div>
-          <Link
+          <Button
+            as={Link}
             to={`/competition/${id}`}
-            className="btn btn-primary d-block mb-3"
+            className="btn-primary d-block mx-auto w-100 py-2 mb-3"
           >
             Enter Now
-          </Link>
+          </Button>
           <div className="nft-card-footer text-center mb-2">
             <span className="text-uppercase fw-bold mb-1">
               Join {totalParticipants} Superwallers

@@ -54,3 +54,16 @@ color: var(--color-grey-2);
 padding: 8px 0px;
 font-size: 14px;
 `
+export const EntryGrid = styled.div`
+display: grid;
+grid-template-columns: 50% 50%;
+`
+export const EntryGridItem = styled.div`
+background-color: var(--color-primary-dark-1);
+padding: 8px 16px;
+text-align:center;
+`
+export const EntryCount = styled.h1`
+font-size: 4rem;
+`
+export const EntryText = styled.h3``

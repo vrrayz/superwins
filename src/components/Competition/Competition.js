@@ -18,8 +18,13 @@ import {
   Icon,
   CloseDate,
   CompetitionDescription,
+  EntryGrid,
+  EntryGridItem,
+  EntryCount,
+  EntryText,
 } from "./styles";
 import { CustomCardText } from "../general_components/CustomCardText";
+import { Button } from "../general_components/Button";
 
 export const Competition = () => {
   const { id } = useParams();
@@ -58,7 +63,7 @@ export const Competition = () => {
             {competitionInfo.description}
           </CompetitionDescription>
         </SectionWrapper>
-        <SectionWrapper>
+        <SectionWrapper id="entrySection">
           <CustomCard>
             <h3 className="text-center mt-2 text-uppercase">
               Enter Competition
@@ -67,6 +72,15 @@ export const Competition = () => {
               You have used <span className="text-danger">0</span> of{" "}
               <span className="text-danger">465</span> entries
             </CustomCardText>
+            <EntryGrid>
+                <EntryGridItem>
+                    <EntryCount>1</EntryCount>
+                    <EntryText>ENTRY</EntryText>
+                    <Button className="btn-primary d-block mx-auto fw-bold w-100">
+                        <Icon className="fa-brands fa-ethereum my-auto me-1 text-light"></Icon>0.001
+                    </Button>
+                </EntryGridItem>
+            </EntryGrid>
           </CustomCard>
         </SectionWrapper>
       </div>
