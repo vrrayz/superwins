@@ -56,14 +56,26 @@ font-size: 14px;
 `
 export const EntryGrid = styled.div`
 display: grid;
-grid-template-columns: 50% 50%;
+grid-template-columns: repeat(2,minmax(0,1fr));
+column-gap: .5rem;
 `
 export const EntryGridItem = styled.div`
 background-color: var(--color-primary-darkgrey-1);
 padding: 8px 16px;
 text-align:center;
+border-radius: 12px;
 `
 export const EntryCount = styled.h1`
 font-size: 4rem;
+`
+export const PromoText = styled.p`
+text-transform: uppercase;
+color: yellow;
+margin: 8px 0;
+font-size: .9em;
+`
+export const SubText = styled.p`
+margin: 8px 0;
+font-size: .75em;
 `
 export const EntryText = styled.h3``

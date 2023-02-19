@@ -22,6 +22,8 @@ import {
   EntryGridItem,
   EntryCount,
   EntryText,
+  PromoText,
+  SubText,
 } from "./styles";
 import { CustomCardText } from "../general_components/CustomCardText";
 import { Button } from "../general_components/Button";
@@ -73,12 +75,21 @@ export const Competition = () => {
               <span className="text-danger">465</span> entries
             </CustomCardText>
             <EntryGrid>
+                <EntryGridItem style={{paddingTop: '2rem'}}>
+                    <EntryCount>1</EntryCount>
+                    <EntryText>ENTRY</EntryText>
+                    <Button className="btn-primary d-block mx-auto mb-3 fw-bold w-100">
+                        <Icon className="fa-brands fa-ethereum my-auto me-1 text-light"></Icon>0.001
+                    </Button>
+                </EntryGridItem>
                 <EntryGridItem>
                     <EntryCount>1</EntryCount>
                     <EntryText>ENTRY</EntryText>
-                    <Button className="btn-primary d-block mx-auto fw-bold w-100">
+                    <Button className="btn-primary d-block mx-auto mb-3 fw-bold w-100">
                         <Icon className="fa-brands fa-ethereum my-auto me-1 text-light"></Icon>0.001
                     </Button>
+                    <PromoText>Includes 10 free entries</PromoText>
+                    <SubText>Gas saving = 15x</SubText>
                 </EntryGridItem>
             </EntryGrid>
           </CustomCard>
