@@ -7,6 +7,7 @@ import { nftCompetitionData } from "../../data/nftCompetitionData";
 import { useEffect } from "react";
 import { useState } from "react";
 import styled from "styled-components";
+import { SectionWrapper } from "../general_components/SectionWrapper";
 
 export const Competition = () => {
   const { id } = useParams();
@@ -20,7 +21,7 @@ export const Competition = () => {
     <MainContainer>
       <div>
         <InfoSection />
-        <CompetitionInfoWrapper>
+        <SectionWrapper id="competitionDetails">
           <CompetitionImage
             src={competitionInfo.imgSrc}
             alt={competitionInfo.name}
@@ -44,14 +45,15 @@ export const Competition = () => {
           <CompetitionDescription>
             {competitionInfo.description}
           </CompetitionDescription>
-        </CompetitionInfoWrapper>
+        </SectionWrapper>
+        <SectionWrapper>
+            
+        </SectionWrapper>
       </div>
     </MainContainer>
   );
 };
-const CompetitionInfoWrapper = styled.div`
-  padding: 0px 16px;
-`;
+
 const CompetitionImage = styled.img`
   width: 100%;
   max-width: 340px;
