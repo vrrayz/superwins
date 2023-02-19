@@ -2,9 +2,9 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css);
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
-:root{
+:root {
   --color-transparent-dark: rgba(0, 0, 0, 0.9);
-  --color-dark-1:#000;
+  --color-dark-1: #000;
   --color-dark-2: #202633;
   --color-dark-3: #20141c;
   --color-primary-darkgrey-1: #3a1b27;
@@ -14,6 +14,9 @@
   --color-light-1: #fff;
   --color-border-primary-red: rgb(174, 47, 47);
   --color-blue-1: #0d6efd;
+  /* eh stands for entry heading */
+  --eh-gradient-from: #facc15;
+  --eh-gradient-to: rgba(250, 204, 21, 0.7);
 }
 
 body {
@@ -345,7 +348,8 @@ a {
   color: var(--color-light-1);
   /* letter-spacing: px; */
 }
-@media (min-width:768px){
+
+@media (min-width:768px) {
   .tabs .tab-item {
     text-transform: uppercase;
     font-size: 14px;
@@ -355,10 +359,12 @@ a {
     color: var(--color-light-1);
     /* letter-spacing: px; */
   }
-  .display-md-inline{
+
+  .display-md-inline {
     display: inline !important;
   }
-  .display-md-block{
+
+  .display-md-block {
     display: block !important;
   }
 }
@@ -456,4 +462,11 @@ h5.nft_heading {
   display: flex;
   flex-direction: column;
   margin: 0px -6px;
+}
+
+.discount-text {
+  background: -webkit-linear-gradient(var(--eh-gradient-from),
+      var(--eh-gradient-to));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

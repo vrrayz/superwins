@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import rainbow from "../../assets/img/rainbow.svg";
+import microchip from "../../assets/img/microchip.png";
 
 export const CompetitionImage = styled.img`
   width: 100%;
@@ -50,32 +52,75 @@ export const CloseDate = styled.span`
   text-transform: uppercase;
 `;
 export const CompetitionDescription = styled.p`
-color: var(--color-grey-2);
-padding: 8px 0px;
-font-size: 14px;
-`
+  color: var(--color-grey-2);
+  padding: 8px 0px;
+  font-size: 14px;
+`;
 export const EntryGrid = styled.div`
-display: grid;
-grid-template-columns: repeat(2,minmax(0,1fr));
-column-gap: .5rem;
-`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+`;
 export const EntryGridItem = styled.div`
-background-color: var(--color-primary-darkgrey-1);
-padding: 8px 16px;
-text-align:center;
-border-radius: 12px;
-`
+  background-color: var(--color-primary-darkgrey-1);
+  padding: 8px 16px;
+  text-align: center;
+  border-radius: 12px;
+  &.recommended {
+    background-image: url(${rainbow});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 4px;
+  }
+  &.max {
+    overflow: hidden;
+    background-image: url(${microchip});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+`;
 export const EntryCount = styled.h1`
-font-size: 4rem;
-`
+  font-size: 4rem;
+  }
+`;
 export const PromoText = styled.p`
-text-transform: uppercase;
-color: yellow;
-margin: 8px 0;
-font-size: .9em;
-`
+  text-transform: uppercase;
+  color: yellow;
+  margin: 8px 0;
+  font-size: 0.9em;
+`;
 export const SubText = styled.p`
-margin: 8px 0;
-font-size: .75em;
-`
-export const EntryText = styled.h3``
+  margin: 8px 0;
+  font-size: 0.75em;
+`;
+export const EntryText = styled.h3``;
+
+export const DiscountSection = styled.section`
+  display: flex;
+  justify-content: center;
+`;
+export const SlashedPrice = styled.h4`
+  color: var(--color-light-1);
+  text-decoration: line-through;
+  text-decoration-color: var(--color-primary-red);
+  text-decoration-thickness: 2px;
+  transform: rotate(345deg);
+  margin-top: 12px;
+`;
+export const MaxValueLabel = styled.div`
+  background: -webkit-linear-gradient(
+    var(--eh-gradient-from),
+    var(--eh-gradient-to)
+  );
+  color: var(--color-dark-1);
+  transform: rotate(335deg);
+  position: relative;
+  top: -30px;
+  right: 64px;
+  text-align: center;
+  font-size: 0.75rem;
+  width: 200px;
+`;
