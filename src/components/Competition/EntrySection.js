@@ -115,7 +115,7 @@ export const EntrySection = () => {
             </ExtraInfoText>
           </CustomCard>
 
-          <CustomCard className='py-2'>
+          <CustomCard className='py-2 mb-4'>
             <FlexBetweenContainer style={{fontSize: '.8rem'}}>
               <span style={{ color: "var(--color-blue-1)" }} className="me-1">Contract</span>
               <Link to={'/'} className="text-light" style={{overflow: 'hidden', textOverflow: 'ellipsis'}}>

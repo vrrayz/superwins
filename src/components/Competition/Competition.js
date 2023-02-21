@@ -10,6 +10,7 @@ import { useState } from "react";
 
 import { CompetitionDetails } from "./CompetitionDetails";
 import { EntrySection } from "./EntrySection";
+import { ParticipantsActivity } from "./ParticipantsActivity";
 
 export const Competition = () => {
   const { id } = useParams();
@@ -25,6 +26,7 @@ export const Competition = () => {
         <InfoSection />
         <CompetitionDetails competitionInfo={competitionInfo} />
         <EntrySection />
+        <ParticipantsActivity />
       </div>
     </MainContainer>
   );
