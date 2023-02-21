@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SectionWrapper } from "../general_components/SectionWrapper";
 import { CustomCard } from "../general_components/CustomCard";
 import styled from "styled-components";
@@ -28,20 +28,34 @@ export const ParticipantsActivity = ({ competitionInfo }) => {
         </CardTab>
         <CardList>
           {isActivityTab
-            ? competitionInfo.activity?.map(({entries,timestamp,user}, index) => (
+            ? competitionInfo.activity?.map(
+                ({ entries, timestamp, user }, index) => (
+                  <CardListItem key={index}>
+                    <User>
+                      <img src={avatar} alt="Avatar" />
+                      <div>
+                        <span>{user}</span>
+                        <br />
+                        <Link to={"/"}>
+                          {entries} {entries > 1 ? "Entries" : "Entry"}
+                        </Link>
+                      </div>
+                    </User>
+                    <Link to={"/"}>{timestamp}</Link>
+                  </CardListItem>
+                )
+              )
+            : competitionInfo.participants?.map(({ entries, user }, index) => (
                 <CardListItem key={index}>
                   <User>
                     <img src={avatar} alt="Avatar" />
-                    <div>
                     <span>{user}</span>
-                    <br />
-                    <Link to={"/"}>{entries} {entries > 1 ? "Entries": "Entry"}</Link>
-                    </div>
                   </User>
-                  <Link to={"/"}>{timestamp}</Link>
+                  <Link to={"/"}>
+                    {entries} {entries > 1 ? "Entries" : "Entry"}
+                  </Link>
                 </CardListItem>
-              ))
-            : "No data found"}
+              ))}
         </CardList>
       </CustomCard>
     </SectionWrapper>

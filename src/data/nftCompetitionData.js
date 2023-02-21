@@ -44,6 +44,32 @@ export const nftCompetitionData = [
         timestamp: "10 minutes ago",
       },
     ],
+    participants: [
+      {
+        user: "Edgard",
+        entries: 465,
+      },
+      {
+        user: "dsup001",
+        entries: 190,
+      },
+      {
+        user: "peekabao",
+        entries: 155,
+      },
+      {
+        user: "Epitaph",
+        entries: 155,
+      },
+      {
+        user: "42069vault",
+        entries: 90,
+      },
+      {
+        user: "moda83",
+        entries: 75,
+      }
+    ]
   },
   {
     id: 2,
@@ -90,6 +116,32 @@ export const nftCompetitionData = [
         timestamp: "10 minutes ago",
       },
     ],
+    participants: [
+      {
+        user: "Edgard",
+        entries: 465,
+      },
+      {
+        user: "dsup001",
+        entries: 190,
+      },
+      {
+        user: "peekabao",
+        entries: 155,
+      },
+      {
+        user: "Epitaph",
+        entries: 155,
+      },
+      {
+        user: "42069vault",
+        entries: 90,
+      },
+      {
+        user: "moda83",
+        entries: 75,
+      }
+    ]
   },
   {
     id: 3,
@@ -136,6 +188,32 @@ export const nftCompetitionData = [
         timestamp: "10 minutes ago",
       },
     ],
+    participants: [
+      {
+        user: "Edgard",
+        entries: 465,
+      },
+      {
+        user: "dsup001",
+        entries: 190,
+      },
+      {
+        user: "peekabao",
+        entries: 155,
+      },
+      {
+        user: "Epitaph",
+        entries: 155,
+      },
+      {
+        user: "42069vault",
+        entries: 90,
+      },
+      {
+        user: "moda83",
+        entries: 75,
+      }
+    ]
   },
   {
     id: 4,
@@ -196,6 +274,32 @@ export const nftCompetitionData = [
         timestamp: "10 minutes ago",
       },
     ],
+    participants: [
+      {
+        user: "Edgard",
+        entries: 465,
+      },
+      {
+        user: "dsup001",
+        entries: 190,
+      },
+      {
+        user: "peekabao",
+        entries: 155,
+      },
+      {
+        user: "Epitaph",
+        entries: 155,
+      },
+      {
+        user: "42069vault",
+        entries: 90,
+      },
+      {
+        user: "moda83",
+        entries: 75,
+      }
+    ]
   },
   {
     id: 6,
@@ -242,5 +346,31 @@ export const nftCompetitionData = [
         timestamp: "10 minutes ago",
       },
     ],
+    participants: [
+      {
+        user: "Edgard",
+        entries: 465,
+      },
+      {
+        user: "dsup001",
+        entries: 190,
+      },
+      {
+        user: "peekabao",
+        entries: 155,
+      },
+      {
+        user: "Epitaph",
+        entries: 155,
+      },
+      {
+        user: "42069vault",
+        entries: 90,
+      },
+      {
+        user: "moda83",
+        entries: 75,
+      }
+    ]
   },
 ];
