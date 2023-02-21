@@ -26,7 +26,7 @@ export const Competition = () => {
         <InfoSection />
         <CompetitionDetails competitionInfo={competitionInfo} />
         <EntrySection />
-        <ParticipantsActivity />
+        <ParticipantsActivity competitionInfo={competitionInfo} />
       </div>
     </MainContainer>
   );

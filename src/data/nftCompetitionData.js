@@ -12,6 +12,38 @@ export const nftCompetitionData = [
     isHourly: true,
     description:
       "The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale",
+    activity: [
+      {
+        user: "braziliandude",
+        entries: 15,
+        timestamp: "a minute ago",
+      },
+      {
+        user: "shotopop",
+        entries: 1,
+        timestamp: "2 minutes ago",
+      },
+      {
+        user: "MikeC249",
+        entries: 15,
+        timestamp: "2 minutes ago",
+      },
+      {
+        user: "HarmfulBoyScout",
+        entries: 15,
+        timestamp: "3 minutes ago",
+      },
+      {
+        user: "TastyBH",
+        entries: 15,
+        timestamp: "7 minutes ago",
+      },
+      {
+        user: "Xlightxdesu",
+        entries: 1,
+        timestamp: "10 minutes ago",
+      },
+    ],
   },
   {
     id: 2,
@@ -26,6 +58,38 @@ export const nftCompetitionData = [
     isHourly: false,
     description:
       "The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale",
+    activity: [
+      {
+        user: "braziliandude",
+        entries: 15,
+        timestamp: "a minute ago",
+      },
+      {
+        user: "shotopop",
+        entries: 1,
+        timestamp: "2 minutes ago",
+      },
+      {
+        user: "MikeC249",
+        entries: 15,
+        timestamp: "2 minutes ago",
+      },
+      {
+        user: "HarmfulBoyScout",
+        entries: 15,
+        timestamp: "3 minutes ago",
+      },
+      {
+        user: "TastyBH",
+        entries: 15,
+        timestamp: "7 minutes ago",
+      },
+      {
+        user: "Xlightxdesu",
+        entries: 1,
+        timestamp: "10 minutes ago",
+      },
+    ],
   },
   {
     id: 3,
@@ -40,6 +104,38 @@ export const nftCompetitionData = [
     isHourly: true,
     description:
       "The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale",
+    activity: [
+      {
+        user: "braziliandude",
+        entries: 15,
+        timestamp: "a minute ago",
+      },
+      {
+        user: "shotopop",
+        entries: 1,
+        timestamp: "2 minutes ago",
+      },
+      {
+        user: "MikeC249",
+        entries: 15,
+        timestamp: "2 minutes ago",
+      },
+      {
+        user: "HarmfulBoyScout",
+        entries: 15,
+        timestamp: "3 minutes ago",
+      },
+      {
+        user: "TastyBH",
+        entries: 15,
+        timestamp: "7 minutes ago",
+      },
+      {
+        user: "Xlightxdesu",
+        entries: 1,
+        timestamp: "10 minutes ago",
+      },
+    ],
   },
   {
     id: 4,
@@ -68,6 +164,38 @@ export const nftCompetitionData = [
     isHourly: true,
     description:
       "The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale",
+    activity: [
+      {
+        user: "braziliandude",
+        entries: 15,
+        timestamp: "a minute ago",
+      },
+      {
+        user: "shotopop",
+        entries: 1,
+        timestamp: "2 minutes ago",
+      },
+      {
+        user: "MikeC249",
+        entries: 15,
+        timestamp: "2 minutes ago",
+      },
+      {
+        user: "HarmfulBoyScout",
+        entries: 15,
+        timestamp: "3 minutes ago",
+      },
+      {
+        user: "TastyBH",
+        entries: 15,
+        timestamp: "7 minutes ago",
+      },
+      {
+        user: "Xlightxdesu",
+        entries: 1,
+        timestamp: "10 minutes ago",
+      },
+    ],
   },
   {
     id: 6,
@@ -82,5 +210,37 @@ export const nftCompetitionData = [
     isHourly: true,
     description:
       "The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale",
+    activity: [
+      {
+        user: "braziliandude",
+        entries: 15,
+        timestamp: "a minute ago",
+      },
+      {
+        user: "shotopop",
+        entries: 1,
+        timestamp: "2 minutes ago",
+      },
+      {
+        user: "MikeC249",
+        entries: 15,
+        timestamp: "2 minutes ago",
+      },
+      {
+        user: "HarmfulBoyScout",
+        entries: 15,
+        timestamp: "3 minutes ago",
+      },
+      {
+        user: "TastyBH",
+        entries: 15,
+        timestamp: "7 minutes ago",
+      },
+      {
+        user: "Xlightxdesu",
+        entries: 1,
+        timestamp: "10 minutes ago",
+      },
+    ],
   },
 ];
