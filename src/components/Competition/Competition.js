@@ -11,6 +11,7 @@ import { useState } from "react";
 import { CompetitionDetails } from "./CompetitionDetails";
 import { EntrySection } from "./EntrySection";
 import { ParticipantsActivity } from "./ParticipantsActivity";
+import { EndingSoon } from "./EndingSoon";
 
 export const Competition = () => {
   const { id } = useParams();
@@ -27,6 +28,7 @@ export const Competition = () => {
         <CompetitionDetails competitionInfo={competitionInfo} />
         <EntrySection />
         <ParticipantsActivity competitionInfo={competitionInfo} />
+        <EndingSoon />
       </div>
     </MainContainer>
   );
