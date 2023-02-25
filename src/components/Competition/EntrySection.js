@@ -20,7 +20,7 @@ import {
 export const EntrySection = () => {
   return (
     <SectionWrapper id="entrySection">
-          <CustomCard className="mb-3">
+          <CustomCard className="mb-2">
             <h3 className="text-center mt-2 text-uppercase">
               Enter Competition
             </h3>
@@ -115,7 +115,7 @@ export const EntrySection = () => {
             </ExtraInfoText>
           </CustomCard>
 
-          <CustomCard className='py-2 mb-4'>
+          <CustomCard className='py-2 mb-2'>
             <FlexBetweenContainer style={{fontSize: '.8rem'}}>
               <span style={{ color: "var(--color-blue-1)" }} className="me-1">Contract</span>
               <Link to={'/'} className="text-light" style={{overflow: 'hidden', textOverflow: 'ellipsis'}}>

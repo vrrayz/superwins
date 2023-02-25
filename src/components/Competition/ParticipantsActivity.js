@@ -9,7 +9,7 @@ export const ParticipantsActivity = ({ competitionInfo }) => {
   const [isActivityTab, setIsActivityTab] = useState(true);
   return (
     <SectionWrapper id="participantsActivity">
-      <CustomCard className="px-1">
+      <CustomCard className="px-1 mb-2">
         <CardTab>
           <CardTabItem
             className={`${isActivityTab && "active"}`}
