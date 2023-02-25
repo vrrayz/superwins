@@ -11,6 +11,7 @@ import { useState } from "react";
 import { CompetitionDetails } from "./CompetitionDetails";
 import { EntrySection } from "./EntrySection";
 import { ParticipantsActivity } from "./ParticipantsActivity";
+import { ShareCompetitionSection } from "./ShareCompetitionSection";
 import { EndingSoon } from "./EndingSoon";
 
 export const Competition = () => {
@@ -28,6 +29,7 @@ export const Competition = () => {
         <CompetitionDetails competitionInfo={competitionInfo} />
         <EntrySection />
         <ParticipantsActivity competitionInfo={competitionInfo} />
+        <ShareCompetitionSection />
         <EndingSoon />
       </div>
     </MainContainer>
