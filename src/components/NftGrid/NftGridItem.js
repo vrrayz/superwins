@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../general_components/Button";
+import { NftCardImage } from "../general_components/NftCardImage";
 
 export const NftGridItem = ({
   id,
@@ -58,11 +59,4 @@ export const NftGridItem = ({
   );
 };
 
-const NftCardImage = styled.img`
-  object-fit: cover;
-  height: 175px;
-  border-radius: 6px;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  cursor: pointer;
-`;
+
