@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const SectionWrapper = ({children}) => {
+export const SectionWrapper = ({children, className}) => {
   return (
-    <Wrapper>
+    <Wrapper className={className}>
         {children}
     </Wrapper>
   )

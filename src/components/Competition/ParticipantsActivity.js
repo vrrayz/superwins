@@ -5,10 +5,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import avatar from "../../assets/img/avatars/default.png";
 
-export const ParticipantsActivity = ({ competitionInfo }) => {
+export const ParticipantsActivity = ({ competitionInfo, className }) => {
   const [isActivityTab, setIsActivityTab] = useState(true);
   return (
-    <SectionWrapper id="participantsActivity">
+    <SectionWrapper className={className} id="participantsActivity">
       <CustomCard className="px-1 mb-2">
         <CardTab>
           <CardTabItem

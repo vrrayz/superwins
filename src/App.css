@@ -348,7 +348,11 @@ a {
   color: var(--color-light-1);
   /* letter-spacing: px; */
 }
-
+@media(max-width:767px) {
+  .display-sm-none {
+    display: none !important;
+  }
+}
 @media (min-width:768px) {
   .tabs .tab-item {
     text-transform: uppercase;
@@ -366,6 +370,9 @@ a {
 
   .display-md-block {
     display: block !important;
+  }
+  .display-md-none {
+    display: none !important;
   }
 }
 
