@@ -36,13 +36,13 @@ export const Competition = () => {
             />
           </section>
           <section>
-          <EntrySection />
-        <ParticipantsActivity
-          className="display-md-none"
-          competitionInfo={competitionInfo}
-        />
-        <ShareCompetitionSection />
-        <EndingSoon />
+            <EntrySection />
+            <ParticipantsActivity
+              className="display-md-none"
+              competitionInfo={competitionInfo}
+            />
+            <ShareCompetitionSection />
+            <EndingSoon />
           </section>
         </CompetitionGrid>
       </div>
@@ -51,12 +51,12 @@ export const Competition = () => {
 };
 
 const CompetitionGrid = styled.div`
-@media (min-width: 768px){
-  display: grid;
-grid-template-columns:1fr 1fr;
-}
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
-@media (min-width: 1200px){
-grid-template-columns:1fr 2fr;
-}
-`
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 2fr;
+  }
+`;
