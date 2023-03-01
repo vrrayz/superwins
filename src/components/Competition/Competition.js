@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { InfoSection } from "../general_components/InfoSection";
 import { MainContainer } from "../MainContainer";
 
@@ -12,7 +12,7 @@ import { EntrySection } from "./EntrySection";
 import { ParticipantsActivity } from "./ParticipantsActivity";
 import { ShareCompetitionSection } from "./ShareCompetitionSection";
 import { EndingSoon } from "./EndingSoon";
-import { EntryGrid } from "./styles";
+import { CloseDate, CompetitionHeading, Divider, EntryGrid, FlexBetweenContainer, FlexStartContainer, Icon, NftValue } from "./styles";
 import styled from "styled-components";
 
 export const Competition = () => {
@@ -36,6 +36,21 @@ export const Competition = () => {
             />
           </section>
           <section>
+          <CompetitionHeading className='display-sm-none display-md-block'>
+            {competitionInfo.name}
+            <i className="fa-solid fa-circle-check ms-1 text-primary"></i>
+          </CompetitionHeading>
+          <FlexBetweenContainer className="mb-2 display-sm-none display-md-flex">
+            <Link to={""}>#{competitionInfo.mintNumber}</Link>
+            <NftValue>
+              Value: <span>${competitionInfo.value}</span>
+            </NftValue>
+          </FlexBetweenContainer>
+          <Divider className='display-sm-none display-md-block' />
+          <FlexStartContainer className="my-2 display-sm-none display-md-flex">
+            <Icon className="fa-solid fa-hourglass-end my-auto me-2"></Icon>
+            <CloseDate>Closes: {competitionInfo.closeDate}</CloseDate>
+          </FlexStartContainer>
             <EntrySection />
             <ParticipantsActivity
               className="display-md-none"

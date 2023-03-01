@@ -4,7 +4,7 @@ import microchip from "../../assets/img/microchip.png";
 
 export const CompetitionImage = styled.img`
   width: 100%;
-  max-width: 340px;
+  max-width: 400px;
   height: 320px;
   display: block;
   margin: auto;
