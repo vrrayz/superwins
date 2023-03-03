@@ -4,13 +4,19 @@ import microchip from "../../assets/img/microchip.png";
 
 export const CompetitionImage = styled.img`
   width: 100%;
-  max-width: 400px;
   height: 320px;
   display: block;
   margin: auto;
   object-fit: cover;
   object-position: center;
   border-radius: 12px;
+  @media (min-width: 1024px) {
+    height: 390px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 420px;
+    height: 420px;
+  }
 `;
 export const CompetitionHeading = styled.h5`
   font-weight: bold;

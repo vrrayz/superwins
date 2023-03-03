@@ -6,7 +6,7 @@ import { CloseDate, CompetitionDescription, CompetitionHeading, CompetitionImage
 
 export const CompetitionDetails = ({competitionInfo}) => {
   return (
-    <SectionWrapper id="competitionDetails">
+    <SectionWrapper className="pe-md-0" id="competitionDetails">
           <CompetitionImage
             src={competitionInfo.imgSrc}
             alt={competitionInfo.name}

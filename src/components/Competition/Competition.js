@@ -12,7 +12,16 @@ import { EntrySection } from "./EntrySection";
 import { ParticipantsActivity } from "./ParticipantsActivity";
 import { ShareCompetitionSection } from "./ShareCompetitionSection";
 import { EndingSoon } from "./EndingSoon";
-import { CloseDate, CompetitionHeading, Divider, EntryGrid, FlexBetweenContainer, FlexStartContainer, Icon, NftValue } from "./styles";
+import {
+  CloseDate,
+  CompetitionHeading,
+  Divider,
+  EntryGrid,
+  FlexBetweenContainer,
+  FlexStartContainer,
+  Icon,
+  NftValue,
+} from "./styles";
 import styled from "styled-components";
 
 export const Competition = () => {
@@ -25,7 +34,7 @@ export const Competition = () => {
   }, []);
   return (
     <MainContainer>
-      <div>
+      <div className="px-lg-4 px-xl-5">
         <InfoSection />
         <CompetitionGrid>
           <section>
@@ -36,21 +45,21 @@ export const Competition = () => {
             />
           </section>
           <section>
-          <CompetitionHeading className='display-sm-none display-md-block'>
-            {competitionInfo.name}
-            <i className="fa-solid fa-circle-check ms-1 text-primary"></i>
-          </CompetitionHeading>
-          <FlexBetweenContainer className="mb-2 display-sm-none display-md-flex">
-            <Link to={""}>#{competitionInfo.mintNumber}</Link>
-            <NftValue>
-              Value: <span>${competitionInfo.value}</span>
-            </NftValue>
-          </FlexBetweenContainer>
-          <Divider className='display-sm-none display-md-block' />
-          <FlexStartContainer className="my-2 display-sm-none display-md-flex">
-            <Icon className="fa-solid fa-hourglass-end my-auto me-2"></Icon>
-            <CloseDate>Closes: {competitionInfo.closeDate}</CloseDate>
-          </FlexStartContainer>
+            <CompetitionHeading className="display-sm-none display-md-block mx-md-3">
+              {competitionInfo.name}
+              <i className="fa-solid fa-circle-check ms-1 text-primary"></i>
+            </CompetitionHeading>
+            <FlexBetweenContainer className="mb-2 display-sm-none display-md-flex mx-md-3">
+              <Link to={""}>#{competitionInfo.mintNumber}</Link>
+              <NftValue>
+                Value: <span>${competitionInfo.value}</span>
+              </NftValue>
+            </FlexBetweenContainer>
+            <Divider className="display-sm-none display-md-block mx-md-3" />
+            <FlexStartContainer className="my-2 display-sm-none display-md-flex mx-md-3 mb-4">
+              <Icon className="fa-solid fa-hourglass-end my-auto me-2"></Icon>
+              <CloseDate>Closes: {competitionInfo.closeDate}</CloseDate>
+            </FlexStartContainer>
             <EntrySection />
             <ParticipantsActivity
               className="display-md-none"
@@ -70,8 +79,12 @@ const CompetitionGrid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+  }
 
   @media (min-width: 1200px) {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1.5fr 2fr;
   }
 `;
