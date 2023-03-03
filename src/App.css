@@ -19,6 +19,28 @@
   --eh-gradient-to: rgba(250, 204, 21, 0.7);
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-dark-1); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-grey-2); 
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-grey-1); 
+}
+
 body {
   background-color: var(--color-dark-1);
   font-family: 'Play', sans-serif;

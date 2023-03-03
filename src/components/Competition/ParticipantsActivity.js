@@ -81,8 +81,8 @@ const CardTabItem = styled.div`
   }
 `;
 const CardList = styled.div`
-  height: 280px;
-  overflow: scroll;
+  height: 420px;
+  overflow-y: scroll;
 `;
 const CardListItem = styled.div`
   display: flex;

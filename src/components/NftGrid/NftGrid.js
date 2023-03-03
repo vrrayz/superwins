@@ -25,13 +25,6 @@ const CustomNftGrid = styled.div`
   display: grid;
   grid-template-columns: ${(props) => props.templateColumn(49)};
   overflow-x: scroll;
-  &::-webkit-scrollbar {
-    height: 4px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--color-primary-red);
-    border-radius: 25px;
-  }
   @media (min-width: 768px) {
     grid-template-columns: ${(props) => props.templateColumn(32)};
     column-gap: 8px;
