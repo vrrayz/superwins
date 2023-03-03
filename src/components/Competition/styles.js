@@ -14,7 +14,7 @@ export const CompetitionImage = styled.img`
     height: 390px;
   }
   @media (min-width: 1200px) {
-    max-width: 420px;
+    max-width: 450px;
     height: 420px;
   }
 `;
@@ -65,9 +65,10 @@ export const CompetitionDescription = styled.p`
 `;
 export const EntryGrid = styled.div`
   display: grid;
+  padding: 0 0.4rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 0.5rem;
-  row-gap: 0.5rem;
+  column-gap: 0.7rem;
+  row-gap: 0.7rem;
 `;
 export const EntryGridItem = styled.div`
   background-color: var(--color-primary-darkgrey-1);

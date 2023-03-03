@@ -45,18 +45,18 @@ export const Competition = () => {
             />
           </section>
           <section>
-            <CompetitionHeading className="display-sm-none display-md-block mx-md-3">
+            <CompetitionHeading className="display-sm-none display-md-block mx-md-3 mx-lg-4">
               {competitionInfo.name}
               <i className="fa-solid fa-circle-check ms-1 text-primary"></i>
             </CompetitionHeading>
-            <FlexBetweenContainer className="mb-2 display-sm-none display-md-flex mx-md-3">
+            <FlexBetweenContainer className="mb-2 display-sm-none display-md-flex mx-md-3 mx-lg-4">
               <Link to={""}>#{competitionInfo.mintNumber}</Link>
               <NftValue>
                 Value: <span>${competitionInfo.value}</span>
               </NftValue>
             </FlexBetweenContainer>
-            <Divider className="display-sm-none display-md-block mx-md-3" />
-            <FlexStartContainer className="my-2 display-sm-none display-md-flex mx-md-3 mb-4">
+            <Divider className="display-sm-none display-md-block mx-md-3 mx-lg-4" />
+            <FlexStartContainer className="my-2 display-sm-none display-md-flex mx-md-3 mb-4 mx-lg-4">
               <Icon className="fa-solid fa-hourglass-end my-auto me-2"></Icon>
               <CloseDate>Closes: {competitionInfo.closeDate}</CloseDate>
             </FlexStartContainer>
@@ -85,6 +85,6 @@ const CompetitionGrid = styled.div`
   }
 
   @media (min-width: 1200px) {
-    grid-template-columns: 1.5fr 2fr;
+    grid-template-columns: 450px 1fr;
   }
 `;
