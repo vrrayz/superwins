@@ -12,6 +12,7 @@ import logo from "../src/assets/img/logo.png";
 import { Footer } from "./components/Footer/Footer";
 import { Competition } from "./components/Competition/Competition";
 import { LiveChat } from "./components/Home/LiveChat";
+import { Signup } from "./components/Auth/Signup";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,6 +30,9 @@ function App() {
         <LoadingScreen />
       ) : (
         <>
+          <Routes>
+            <Route path="/signup/register" element={<Signup />} />
+          </Routes>
           <Navbar setConnectWalletModal={setConnectWalletModal} logo={logo} />
           {connectWalletModal && (
             <ConnectWalletModal setConnectWalletModal={setConnectWalletModal} />
