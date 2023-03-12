@@ -20,7 +20,7 @@ import {
   FlexStartContainer,
   NftValue,
 } from "./styles";
-import { Icon } from "../general/Icon";
+import { Icon } from "../general_components/Icon";
 import styled from "styled-components";
 
 export const Competition = () => {

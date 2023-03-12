@@ -16,7 +16,7 @@ import {
     SlashedPrice,
     MaxValueLabel,
   } from "./styles";
-import { Icon } from '../general/Icon';
+import { Icon } from '../general_components/Icon';
 export const EntrySection = () => {
   return (
     <SectionWrapper id="entrySection">

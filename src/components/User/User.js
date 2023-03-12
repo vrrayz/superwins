@@ -3,7 +3,7 @@ import React from "react";
 import { MainContainer } from "../MainContainer";
 import { Avatar, HeadingContainer, UserDetails, Name, Address, DateJoined } from "./styles";
 import profilePic from "../../assets/img/avatars/avatar.png"
-import { Icon } from "../general/Icon";
+import { Icon } from "../general_components/Icon";
 
 export const User = () => {
   return (
