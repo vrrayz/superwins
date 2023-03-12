@@ -6,7 +6,6 @@ import { CustomCardText } from '../general_components/CustomCardText';
 import { SectionWrapper } from '../general_components/SectionWrapper';
 import {
     FlexBetweenContainer,
-    Icon,
     EntryGrid,
     EntryGridItem,
     EntryCount,
@@ -17,6 +16,7 @@ import {
     SlashedPrice,
     MaxValueLabel,
   } from "./styles";
+import { Icon } from '../general/Icon';
 export const EntrySection = () => {
   return (
     <SectionWrapper id="entrySection">

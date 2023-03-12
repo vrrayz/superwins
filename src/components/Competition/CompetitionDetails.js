@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { SectionWrapper } from '../general_components/SectionWrapper'
-import { CloseDate, CompetitionDescription, CompetitionHeading, CompetitionImage, Divider, FlexBetweenContainer, FlexStartContainer, Icon, NftValue } from './styles'
+import { CloseDate, CompetitionDescription, CompetitionHeading, CompetitionImage, Divider, FlexBetweenContainer, FlexStartContainer, NftValue } from './styles'
+import { Icon } from '../general/Icon'
 
 export const CompetitionDetails = ({competitionInfo}) => {
   return (

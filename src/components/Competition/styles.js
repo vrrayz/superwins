@@ -49,10 +49,6 @@ export const Divider = styled.hr`
   margin: 0;
   opacity: 1;
 `;
-export const Icon = styled.i`
-  color: var(--color-blue-1);
-  font-size: 18px;
-`;
 export const CloseDate = styled.span`
   font-size: 12px;
   color: var(--color-light-1);

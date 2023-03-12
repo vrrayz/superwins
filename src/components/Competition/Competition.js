@@ -16,12 +16,11 @@ import {
   CloseDate,
   CompetitionHeading,
   Divider,
-  EntryGrid,
   FlexBetweenContainer,
   FlexStartContainer,
-  Icon,
   NftValue,
 } from "./styles";
+import { Icon } from "../general/Icon";
 import styled from "styled-components";
 
 export const Competition = () => {
