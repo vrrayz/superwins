@@ -34,7 +34,7 @@ export const ParticipantsActivity = ({ competitionInfo, className }) => {
                     <User>
                       <img src={avatar} alt="Avatar" />
                       <div>
-                        <span>{user}</span>
+                        <UserLink to={`/sw/${user}`}>{user}</UserLink>
                         <br />
                         <Link to={"/"}>
                           {entries} {entries > 1 ? "Entries" : "Entry"}
@@ -49,7 +49,7 @@ export const ParticipantsActivity = ({ competitionInfo, className }) => {
                 <CardListItem key={index}>
                   <User>
                     <img src={avatar} alt="Avatar" />
-                    <span>{user}</span>
+                    <UserLink to={`/sw/${user}`}>{user}</UserLink>
                   </User>
                   <Link to={"/"}>
                     {entries} {entries > 1 ? "Entries" : "Entry"}
@@ -93,6 +93,9 @@ const CardListItem = styled.div`
     margin: auto 0;
   }
 `;
+const UserLink = styled(Link)`
+  color: var(--color-light-1);
+`;
 const User = styled.div`
   display: flex;
   img {
@@ -101,7 +104,7 @@ const User = styled.div`
     border-radius: 50%;
     margin-right: 1rem;
   }
-  span {
+  ${UserLink} {
     margin: auto 0;
   }
   a {

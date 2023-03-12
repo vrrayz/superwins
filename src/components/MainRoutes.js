@@ -7,6 +7,7 @@ import { LiveChat } from "./Home/LiveChat";
 import logo from "../assets/img/logo.png";
 import { Competition } from "./Competition/Competition";
 import { Home } from "./Home/Home";
+import { User } from "./User/User";
 
 export const MainRoutes = () => {
   const [connectWalletModal, setConnectWalletModal] = useState(false);
@@ -17,10 +18,13 @@ export const MainRoutes = () => {
       {connectWalletModal && (
         <ConnectWalletModal setConnectWalletModal={setConnectWalletModal} />
       )}
+      
       <Routes>
         <Route index element={<Home />} />
         <Route path="competition/:id" element={<Competition />} />
+        <Route path="sw/:username" element={<User />} />
       </Routes>
+
       <LiveChat isChatToggled={isChatToggled} />
       <ToggleChatButton
         onClick={() => setIsChatToggled(!isChatToggled)}
