@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { CustomCard } from '../general_components/CustomCard'
 import { SectionWrapper } from '../general_components/SectionWrapper'
-import { Icon } from './styles'
+import { Icon } from '../general/Icon'
 
 export const ShareCompetitionSection = () => {
   return (
