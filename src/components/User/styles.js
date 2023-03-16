@@ -12,14 +12,6 @@ width: 92px;
 height: 92px;
 border-radius: 50%;
 `
-
 export const UserDetails = styled.div`
 color: var(--color-light-1);
 `
-export const Name = styled.h3`
-`
-export const Address = styled.p`
-color: var(--color-grey-2);
-`
-export const DateJoined = styled.p``
-export const shareIcon = styled.i``

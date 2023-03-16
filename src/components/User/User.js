@@ -1,9 +1,11 @@
 import React from "react";
 
 import { MainContainer } from "../MainContainer";
-import { Avatar, HeadingContainer, UserDetails, Name, Address, DateJoined } from "./styles";
+import { Avatar, HeadingContainer, UserDetails } from "./styles";
 import profilePic from "../../assets/img/avatars/avatar.png"
-import { Icon } from "../general_components/Icon";
+import shareIcon from "../../assets/img/icons/icons8-share-light.svg";
+import { Icon, ImgIcon } from "../general_components/Icon";
+import { TextLarge, TextMedium, TextSmall } from "../general_components/typography";
 
 export const User = () => {
   return (
@@ -11,10 +13,10 @@ export const User = () => {
       <HeadingContainer>
         <Avatar src={profilePic} alt="avatar" />
         <UserDetails>
-            <Name>Edgard</Name>
-            <Address>0xa8aad55c115a9213d790e11ad90a60f3540fee72</Address>
-            <DateJoined>Joined Sep 2022</DateJoined>
-            <Icon className="fa-solid fa-share-nodes my-auto me-2 text-light"></Icon>
+            <TextLarge className="mb-0">Edgard</TextLarge>
+            <TextMedium className="mb-0">0xa8aad55c115a9213d790e11ad90a60f3540fee72</TextMedium>
+            <TextMedium className="text__grey-2 mb-2">Joined Sep 2022</TextMedium>
+            <ImgIcon src={shareIcon} />
         </UserDetails>
       </HeadingContainer>
     </MainContainer>
