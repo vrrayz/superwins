@@ -44,11 +44,7 @@ export const NftValue = styled.span`
     font-size: 18px;
   }
 `;
-export const Divider = styled.hr`
-  color: var(--color-grey-1);
-  margin: 0;
-  opacity: 1;
-`;
+
 export const CloseDate = styled.span`
   font-size: 12px;
   color: var(--color-light-1);

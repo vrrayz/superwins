@@ -15,13 +15,13 @@ import { EndingSoon } from "./EndingSoon";
 import {
   CloseDate,
   CompetitionHeading,
-  Divider,
   FlexBetweenContainer,
   FlexStartContainer,
   NftValue,
 } from "./styles";
 import { Icon } from "../general_components/Icon";
 import styled from "styled-components";
+import { Divider } from "../general_components/Divider";
 
 export const Competition = () => {
   const { id } = useParams();
