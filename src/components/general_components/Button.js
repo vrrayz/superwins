@@ -1,13 +1,8 @@
 import styled from "styled-components";
 import React from 'react'
 
-export const Button = ({children, className, targetElement,to}) => {
-  return (
-    <StyledButton className={className} as={targetElement} to={to}>{children}</StyledButton>
-  )
-}
 
-const StyledButton = styled.button`
+export const Button = styled.button`
   border-radius: 25px;
   text-transform: uppercase;
   font-size: 14px !important;
