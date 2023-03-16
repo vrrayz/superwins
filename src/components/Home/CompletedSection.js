@@ -1,19 +1,17 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { GridSection } from "../NftGrid/GridSection";
 import { InnerTab } from "./InnerTab";
+import { completedSectionTabItems } from "../../data/tabData";
 
 export const CompletedSection = ({ nftCompetitionData }) => {
-  const [isHourlySchedule, setIsHourlySchedule] = useState(true);
-
+  const [tabItems, setTabItems] = useState(completedSectionTabItems)
   return (
     <>
       <InnerTab
-        isFirstItem={isHourlySchedule}
-        setIsFirstItem={setIsHourlySchedule}
-        items={["Hourly schedule", "Head 2 Head"]}
+        setTabItems={setTabItems}
+        items={tabItems}
       />
-      {isHourlySchedule ? (
+      {tabItems[0].active ? (
         <GridSection
           nftCompetitionData={nftCompetitionData}
           className=""

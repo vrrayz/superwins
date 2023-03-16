@@ -5,21 +5,21 @@ import rewardImg from "../../assets/img/rewards/eth-1.png";
 import avatarImg from "../../assets/img/avatars/default.png";
 import { competitionActivityData } from "../../data/competitionActivityData";
 import { competitionGameActivityData } from "../../data/competitionGameActivityData";
+import { activitySectionTabItems } from "../../data/tabData";
 import { Link } from "react-router-dom";
 import { InnerTab } from "./InnerTab";
 import { useState } from "react";
 
 export const ActivitySection = () => {
-  const [isActivity, setIsActivity] = useState(true);
+  const [tabItems, setTabItems] = useState(activitySectionTabItems)
   return (
     <>
-      <InnerTab
-        isFirstItem={isActivity}
-        setIsFirstItem={setIsActivity}
-        items={["Activity", "Games"]}
+       <InnerTab
+        setTabItems={setTabItems}
+        items={tabItems}
       />
-      <ListGroupItem className={`list-header ${isActivity && 'activity-list'}`} isActivity={isActivity}>
-        {isActivity ? (
+      <ListGroupItem className={`list-header ${tabItems[0].active && 'activity-list'}`} isActivity={tabItems[0].active}>
+        {tabItems[0].active ? (
           <>
             <span>Competition</span>
             <span>Username</span>
@@ -36,9 +36,9 @@ export const ActivitySection = () => {
           </>
         )}
       </ListGroupItem>
-      {isActivity &&
+      {tabItems[0].active &&
         competitionActivityData.map(({id, reward,mintNo,username,entriesPurchased,timestamp}) => (
-          <ListGroupItem key={id} className={`${isActivity && 'activity-list'}`} isActivity={isActivity}>
+          <ListGroupItem key={id} className={`${tabItems[0].active && 'activity-list'}`} isActivity={tabItems[0].active}>
             <ListData>
               <CompetitionRewardSection>
                 <img src={rewardImg} alt="reward" />
@@ -72,9 +72,9 @@ export const ActivitySection = () => {
             </ListData>
           </ListGroupItem>
         ))}
-      {!isActivity &&
+      {!tabItems[0].active &&
         competitionGameActivityData.map(({id,name,username,action,amount,timestamp}) => (
-          <ListGroupItem key={id} isActivity={isActivity}>
+          <ListGroupItem key={id} isActivity={tabItems[0].active}>
             <ListData>
               <GameSection>
                 <img src={rewardImg} alt="reward" />
