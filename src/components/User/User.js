@@ -4,10 +4,17 @@ import { MainContainer } from "../MainContainer";
 import { Avatar, HeadingContainer, UserDetails } from "./styles";
 import profilePic from "../../assets/img/avatars/avatar.png"
 import shareIcon from "../../assets/img/icons/icons8-share-light.svg";
-import { Icon, ImgIcon } from "../general_components/Icon";
-import { TextLarge, TextMedium, TextSmall } from "../general_components/typography";
+import { ImgIcon } from "../general_components/Icon";
+import { TextLarge, TextMedium } from "../general_components/typography";
+import { InnerTab } from "../Home/InnerTab";
+import { useState } from "react";
+import { userComponentTabItems } from "../../data/tabData";
+import { Divider } from "../general_components/Divider";
+import { GridSection } from "../NftGrid/GridSection";
+import { nftCompetitionData } from "../../data/nftCompetitionData";
 
 export const User = () => {
+  const [tabItems, setTabItems] = useState(userComponentTabItems)
   return (
     <MainContainer>
       <HeadingContainer>
@@ -19,6 +26,17 @@ export const User = () => {
             <ImgIcon src={shareIcon} />
         </UserDetails>
       </HeadingContainer>
+      <InnerTab
+        setTabItems={setTabItems}
+        items={tabItems}
+      />
+      <Divider style={{margin: '0 16px'}} />
+      <GridSection
+          nftCompetitionData={nftCompetitionData}
+          className=""
+          sectionHeading={""}
+          hasCarouselOption={false}
+        />
     </MainContainer>
   );
 };
