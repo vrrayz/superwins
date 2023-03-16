@@ -14,9 +14,12 @@ export const NftGridItem = ({
   totalParticipants,
   closeDate,
 }) => {
-  const navigate = useNavigate();
+  const convertedCloseDate = closeDate * 1000;
+  const date = new Date(convertedCloseDate).toDateString().substring(4);
+  const hasEnded = convertedCloseDate < new Date();
 
-  const redirect = () => navigate(`/competition/${id}`);
+  const navigate = useNavigate();
+  const redirect = (route) => navigate(route);
 
   return (
     <div className="grid-item">
@@ -25,38 +28,45 @@ export const NftGridItem = ({
           src={imgSrc}
           className="card-image-top"
           alt="nft_image"
-          onClick={redirect}
+          onClick={() => redirect(`/competition/${id}`)}
         />
         <div className="card-body py-1">
           <div className="nft-info">
             <span className="badge mint_serial">#{mintNumber}</span>
-            <span className="badge time_left">{timeLeft}</span>
+            {!hasEnded && <span className="badge time_left">{timeLeft}</span>}
           </div>
           <h5 className="nft_heading my-1">
             <span>{name}</span>
             <i className="fa-solid fa-circle-check ms-1 text-primary"></i>
           </h5>
-          <div className="nft-value my-1 mb-2">
-            <small>Value:</small>
+          <div className="nft-value my-1 mb-2 text-center">
             <span className="amount">${value}</span>
           </div>
           <Button
-            as={Link}
-            to={`/competition/${id}`}
-            className="btn-primary d-block mx-auto w-100 py-2 mb-3"
+            onClick={() => redirect(`/competition/${id}`)}
+            disabled={hasEnded}
+            className={`${
+              hasEnded ? "bg__grey-1" : "btn-primary"
+            } d-block mx-auto text-center w-100 py-2 mb-3`}
           >
-            Enter Now
+            {hasEnded ? "Ended few days ago" : "Enter Now"}
           </Button>
           <div className="nft-card-footer text-center mb-2">
-            <span className="text-uppercase fw-bold mb-1">
-              Join {totalParticipants} Superwallers
-            </span>
-            <span>Closes: {closeDate}</span>
+            {hasEnded ? (
+              <span className="text-uppercase fw-bold mb-1">Won by</span>
+
+              
+            ) : (
+              <>
+                <span className="text-uppercase fw-bold mb-1">
+                  Join {totalParticipants} Superwallers
+                </span>
+                <span>Closes: {date}</span>
+              </>
+            )}
           </div>
         </div>
       </div>
     </div>
   );
 };
-
-

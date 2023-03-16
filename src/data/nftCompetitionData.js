@@ -8,7 +8,7 @@ export const nftCompetitionData = [
     name: "Mutant Ape Yacht",
     value: 42427,
     totalParticipants: 218,
-    closeDate: "3 Feb 2013",
+    closeDate: 1679011200,
     isHourly: true,
     description:
       "The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale",
@@ -80,7 +80,7 @@ export const nftCompetitionData = [
     name: "Mutant Ape Yacht",
     value: 4027,
     totalParticipants: 100,
-    closeDate: "3 Jan 2020",
+    closeDate: 1679097600,
     isHourly: false,
     description:
       "The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale",
@@ -152,7 +152,7 @@ export const nftCompetitionData = [
     name: "Mutant Ape Yacht",
     value: 4027,
     totalParticipants: 100,
-    closeDate: "3 Jan 2020",
+    closeDate: 1679011200,
     isHourly: true,
     description:
       "The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale",
@@ -224,7 +224,7 @@ export const nftCompetitionData = [
     name: "Mutant Ape Yacht",
     value: 4027,
     totalParticipants: 100,
-    closeDate: "3 Jan 2020",
+    closeDate: 1679097600,
     isHourly: false,
     description:
       "The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale",
@@ -238,7 +238,7 @@ export const nftCompetitionData = [
     name: "Mutant Ape Yacht",
     value: 4027,
     totalParticipants: 100,
-    closeDate: "3 Jan 2020",
+    closeDate: 1679011200,
     isHourly: true,
     description:
       "The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale",
@@ -310,7 +310,7 @@ export const nftCompetitionData = [
     name: "Mutant Ape Yacht",
     value: 4027,
     totalParticipants: 100,
-    closeDate: "3 Jan 2020",
+    closeDate: 1679270400,
     isHourly: true,
     description:
       "The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale",
