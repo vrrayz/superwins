@@ -9,17 +9,6 @@ export const GridSection = ({
   sectionHeading,
 }) => {
   const [isCarouselView, setIsCarouselView] = useState(false);
-  const GridSectionHeading = styled.div`
-    display: flex;
-    justify-content: space-between;
-  `;
-  const ToggleViewButton = styled.button`
-    font-size: 12px;
-    border: none;
-    outline: none;
-    color: var(--color-light-1);
-    background-color: transparent;
-  `;
   return (
     <section className={`${className} px-2 mb-3`}>
       <GridSectionHeading className="section-heading px-1">
@@ -36,3 +25,14 @@ export const GridSection = ({
     </section>
   );
 };
+const GridSectionHeading = styled.div`
+    display: flex;
+    justify-content: space-between;
+  `;
+  const ToggleViewButton = styled.button`
+    font-size: 12px;
+    border: none;
+    outline: none;
+    color: var(--color-light-1);
+    background-color: transparent;
+  `;

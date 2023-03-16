@@ -3,11 +3,6 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Tabs = ({tabs, updateParams}) => {
-    const TabSection = styled.section `
-    @media (min-width: 768px) {
-        justify-content: start;
-    }
-    `
   return (
     <TabSection className='tabs'>
         <Link
@@ -34,3 +29,8 @@ export const Tabs = ({tabs, updateParams}) => {
     </TabSection>
   )
 }
+const TabSection = styled.section `
+    @media (min-width: 768px) {
+        justify-content: start;
+    }
+    `

@@ -3,23 +3,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Footer = ({logo}) => {
-  const FooterList = styled.footer`
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 14px;
-  `;
-  const CopyRightSection = styled.div`
-  margin:32px auto;
-  text-align:center;
-  color: var(--color-light-1);
-  text-transform:uppercase;
-  line-height:1.3;
-  font-size:12px;
-  `
-  const FooterLogo = styled.div`
-  margin:0px auto 32px auto;
-  `
   return (
     <FooterList>
       <div className="footer-socials mt-5">
@@ -51,3 +34,20 @@ export const Footer = ({logo}) => {
     </FooterList>
   );
 };
+const FooterList = styled.footer`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 14px;
+  `;
+  const CopyRightSection = styled.div`
+  margin:32px auto;
+  text-align:center;
+  color: var(--color-light-1);
+  text-transform:uppercase;
+  line-height:1.3;
+  font-size:12px;
+  `
+  const FooterLogo = styled.div`
+  margin:0px auto 32px auto;
+  `

@@ -7,13 +7,9 @@ import styled from "styled-components";
 
 export const Navbar = ({ setConnectWalletModal, logo }) => {
   const [isMenuBarToggled, setIsMenuBarToggled] = useState(false);
-  const CustomNav = styled.nav`
-    ${!isMenuBarToggled && `backdrop-filter: blur(6px); background-color: var(--color-transparent-dark) !important;`}
-  `;
-
   return (
     <header className={`menu-container ${isMenuBarToggled && `open-menu`}`}>
-      <CustomNav className="navbar navbar-expand-lg bg-dark py-0">
+      <CustomNav isMenuBarToggled={isMenuBarToggled} className="navbar navbar-expand-lg bg-dark py-0">
         <div className="container-fluid">
           <Link to={"/"} className="navbar-brand-i d-lg-none">
             <i className="fa-brands fa-discord glow"></i>
@@ -41,3 +37,6 @@ export const Navbar = ({ setConnectWalletModal, logo }) => {
     </header>
   );
 };
+const CustomNav = styled.nav`
+    ${props => !props.isMenuBarToggled && `backdrop-filter: blur(6px); background-color: var(--color-transparent-dark) !important;`}
+  `;
