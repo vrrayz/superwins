@@ -22,6 +22,7 @@ import {
 import { Icon } from "../general_components/Icon";
 import styled from "styled-components";
 import { Divider } from "../general_components/Divider";
+import { SectionWrapper } from "../general_components/SectionWrapper";
 
 export const Competition = () => {
   const { id } = useParams();
@@ -33,17 +34,17 @@ export const Competition = () => {
   }, []);
   return (
     <MainContainer>
-      <div className="px-lg-4 px-xl-5">
+      <SectionWrapper className="px-0 px-lg-4 px-xl-5">
         <InfoSection />
         <CompetitionGrid>
-          <section>
+          <SectionWrapper className="px-0">
             <CompetitionDetails competitionInfo={competitionInfo} />
             <ParticipantsActivity
               className="display-sm-none display-md-block"
               competitionInfo={competitionInfo}
             />
-          </section>
-          <section>
+          </SectionWrapper>
+          <SectionWrapper className="px-0">
             <CompetitionHeading className="display-sm-none display-md-block mx-md-3 mx-lg-4">
               {competitionInfo.name}
               <i className="fa-solid fa-circle-check ms-1 text-primary"></i>
@@ -66,9 +67,9 @@ export const Competition = () => {
             />
             <ShareCompetitionSection />
             <EndingSoon />
-          </section>
+          </SectionWrapper>
         </CompetitionGrid>
-      </div>
+      </SectionWrapper>
     </MainContainer>
   );
 };
