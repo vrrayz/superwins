@@ -32,6 +32,9 @@
 .bg__grey-2{
   background-color: var(--color-grey-2);
 }
+.bg__grey-1, .bg__grey-2{
+  color: var(--color-light-1);
+}
 
 /* width */
 ::-webkit-scrollbar {
