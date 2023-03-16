@@ -19,6 +19,20 @@
   --eh-gradient-to: rgba(250, 204, 21, 0.7);
 }
 
+/**** Color Classes ****/
+.text__grey-1{
+  color: var(--color-grey-1);
+}
+.text__grey-2{
+  color: var(--color-grey-2);
+}
+.bg__grey-1{
+  background-color: var(--color-grey-1);
+}
+.bg__grey-2{
+  background-color: var(--color-grey-2);
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 6px;
