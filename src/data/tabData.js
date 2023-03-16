@@ -7,3 +7,8 @@ export const completedSectionTabItems = [
     {name: "Activity", active: true},
     {name: "Games", active: false},
   ]
+  export const userComponentTabItems = [
+    {name: "Competitions Entered", active: true},
+    {name: "Nfts owned", active: false},
+    {name: "Wins", active: false},
+  ]
