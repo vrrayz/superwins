@@ -2,7 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../general_components/Button";
-import { NftCardImage } from "../general_components/NftCardImage";
+import {
+  CardImageSection,
+  NftBadgeInfo,
+  NftCardImage,
+} from "../general_components/NftCardImage";
+import { Badge } from "../general_components/Badge";
 
 export const NftGridItem = ({
   id,
@@ -24,17 +29,19 @@ export const NftGridItem = ({
   return (
     <div className="grid-item">
       <div className="card nft-card border-0">
-        <NftCardImage
-          src={imgSrc}
-          className="card-image-top"
-          alt="nft_image"
-          onClick={() => redirect(`/competition/${id}`)}
-        />
+        <CardImageSection>
+          <NftCardImage
+            src={imgSrc}
+            className="card-image-top"
+            alt="nft_image"
+            onClick={() => redirect(`/competition/${id}`)}
+          />
+          <NftBadgeInfo>
+            <Badge className="mint_serial">#{mintNumber}</Badge>
+            {!hasEnded && <Badge className="time_left">{timeLeft}</Badge>}
+          </NftBadgeInfo>
+        </CardImageSection>
         <div className="card-body py-1">
-          <div className="nft-info">
-            <span className="badge mint_serial">#{mintNumber}</span>
-            {!hasEnded && <span className="badge time_left">{timeLeft}</span>}
-          </div>
           <h5 className="nft_heading my-1">
             <span>{name}</span>
             <i className="fa-solid fa-circle-check ms-1 text-primary"></i>
@@ -54,8 +61,6 @@ export const NftGridItem = ({
           <div className="nft-card-footer text-center mb-2">
             {hasEnded ? (
               <span className="text-uppercase fw-bold mb-1">Won by</span>
-
-              
             ) : (
               <>
                 <span className="text-uppercase fw-bold mb-1">
