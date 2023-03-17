@@ -24,6 +24,8 @@ export const AuthRoutes = ({ logo }) => {
 const CustomSectionWrapper = styled(SectionWrapper)`
   display: grid;
   grid-template-rows: 150px 2fr;
+  max-width: 400px;
+  margin:auto;
 `;
 const Logo = styled.img`
   margin: auto;
