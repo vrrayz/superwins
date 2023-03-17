@@ -7,7 +7,7 @@ import "./App.css";
 import logo from "../src/assets/img/logo.png";
 import { Footer } from "./components/Footer/Footer";
 
-import { Signup } from "./components/Auth/Signup";
+import { AuthRoutes } from "./components/Auth/AuthRoutes";
 import { MainRoutes } from "./components/MainRoutes";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
         <>
           <Routes>
             <Route path="/*" element={<MainRoutes />} />
-            <Route path="/signup/register" element={<Signup />} />
+            <Route path="/signup/*" element={<AuthRoutes logo={logo} />} />
           </Routes>
           <Footer logo={logo} />
         </>
