@@ -1,6 +1,7 @@
 import React from "react";
 import { nftCompetitionData } from "../../data/nftCompetitionData";
 import { GridSection } from "../NftGrid/GridSection";
+import { NftsOwned } from "./NftsOwned";
 
 export const UserTabItems = ({ tabItem }) => {
   return (
@@ -14,6 +15,10 @@ export const UserTabItems = ({ tabItem }) => {
               sectionHeading={""}
               hasCarouselOption={false}
             />
+          )}
+
+          {tabItem.name === "Nfts owned" && (
+            <NftsOwned></NftsOwned>
           )}
         </>
       )}
