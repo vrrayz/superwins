@@ -24,4 +24,7 @@ export const Button = styled.button`
     background-color: rgba(231, 7, 7, 0.6) !important;
     border: 3px solid var(--color-border-primary-red) !important;
   }
+  &.btn-primary:disabled{
+    background-color: var(--color-light-red);
+  }
 `;
