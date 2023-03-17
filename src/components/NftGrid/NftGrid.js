@@ -1,19 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
+import { useTemplateColumn } from "../../hooks/useTemplateColumn";
 
 import { NftGridItem } from "./NftGridItem";
 
 export const NftGrid = ({ nftCompetitionData, isCarouselView }) => {
-  const gridTemplateColumnCondition = (templateColumn) =>
-    isCarouselView
-      ? nftCompetitionData.map((x) => {
-          return `${templateColumn}%`;
-        })
-      : `${templateColumn}% `.repeat(parseInt(100 / templateColumn));
+  const {gridTemplateColumn} = useTemplateColumn(isCarouselView,nftCompetitionData)
+ 
   return (
     <CustomNftGrid
-      templateColumn={gridTemplateColumnCondition}
-      className="nft-grid pb-3"
+      templateColumn={gridTemplateColumn}
+      className="pb-3"
     >
       {nftCompetitionData.map((competition) => {
         return <NftGridItem key={competition.id} {...competition} />;
@@ -21,9 +18,11 @@ export const NftGrid = ({ nftCompetitionData, isCarouselView }) => {
     </CustomNftGrid>
   );
 };
-const CustomNftGrid = styled.div`
+export const CustomNftGrid = styled.div`
   display: grid;
   grid-template-columns: ${(props) => props.templateColumn(49)};
+  column-gap:6px;
+  row-gap:8px;
   overflow-x: scroll;
   @media (min-width: 768px) {
     grid-template-columns: ${(props) => props.templateColumn(32)};
