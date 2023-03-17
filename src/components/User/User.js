@@ -28,7 +28,8 @@ export const User = () => {
             <TextMedium className="text__grey-2 mb-2">
               Joined Sep 2022
             </TextMedium>
-            <ImgIcon src={shareIcon} />
+            {/* More functionality is needed here... (dropdown and twitter/facebook share option) */}
+            <ImgIcon src={shareIcon} /> 
           </UserDetails>
         </HeadingContainer>
         <InnerTab setTabItems={setTabItems} items={tabItems} />
