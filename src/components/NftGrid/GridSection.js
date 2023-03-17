@@ -11,7 +11,7 @@ export const GridSection = ({
 }) => {
   const [isCarouselView, setIsCarouselView] = useState(false);
   return (
-    <section className={`${className} px-2 mb-3`}>
+    <section className={`${className} py-2 mb-3`}>
       <GridSectionHeading className="section-heading px-1">
         <span>{sectionHeading}</span>
         {hasCarouselOption && <ToggleViewButton onClick={() => setIsCarouselView(!isCarouselView)}>

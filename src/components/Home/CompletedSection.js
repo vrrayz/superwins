@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { GridSection } from "../NftGrid/GridSection";
 import { InnerTab } from "./InnerTab";
 import { completedSectionTabItems } from "../../data/tabData";
+import { SectionWrapper } from "../general_components/SectionWrapper";
 
 export const CompletedSection = ({ nftCompetitionData }) => {
   const [tabItems, setTabItems] = useState(completedSectionTabItems)
@@ -11,6 +12,7 @@ export const CompletedSection = ({ nftCompetitionData }) => {
         setTabItems={setTabItems}
         items={tabItems}
       />
+      <SectionWrapper>
       {tabItems[0].active ? (
         <GridSection
           nftCompetitionData={nftCompetitionData}
@@ -24,6 +26,7 @@ export const CompletedSection = ({ nftCompetitionData }) => {
           sectionHeading={""}
         />
       )}
+      </SectionWrapper>
     </>
   );
 };
