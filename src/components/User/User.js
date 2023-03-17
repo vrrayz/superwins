@@ -19,7 +19,7 @@ export const User = () => {
     <MainContainer>
       <SectionWrapper>
         <HeadingContainer>
-          <Avatar src={profilePic} alt="avatar" />
+          <Avatar src={profilePic} alt="avatar" width={92} height={92} />
           <UserDetails>
             <TextLarge className="mb-0">Edgard</TextLarge>
             <TextMedium className="mb-0">
@@ -34,7 +34,7 @@ export const User = () => {
         <InnerTab setTabItems={setTabItems} items={tabItems} />
         <Divider />
         {tabItems.map((item, index) => (
-          <UserTabItems tabItem={item} key={index} />
+          <UserTabItems tabItem={item} key={index} profilePic={profilePic} />
         ))}
       </SectionWrapper>
     </MainContainer>

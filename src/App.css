@@ -34,7 +34,7 @@
 .bg__grey-2{
   background-color: var(--color-grey-2);
 }
-.bg__grey-1, .bg__grey-2, .bg__dark-1, .bg__dark-4 .text__light-1{
+.bg__grey-1, .bg__grey-2, .bg__dark-1, .bg__dark-4, .text__light-1, .bg__blue-1{
   color: var(--color-light-1);
 }
 .bg__light-1{
@@ -51,6 +51,12 @@
 }
 .text__dark-4{
   color: var(--color-dark-4);
+}
+.text__blue-1{
+  color: var(--color-blue-1);
+}
+.bg__blue-1{
+  color: var(--color-blue-1);
 }
 
 /* width */

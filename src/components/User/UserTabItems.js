@@ -2,8 +2,9 @@ import React from "react";
 import { nftCompetitionData } from "../../data/nftCompetitionData";
 import { GridSection } from "../NftGrid/GridSection";
 import { NftsOwned } from "./NftsOwned";
+import { Wins } from "./Wins";
 
-export const UserTabItems = ({ tabItem }) => {
+export const UserTabItems = ({ tabItem, profilePic }) => {
   return (
     <>
       {tabItem.active && (
@@ -17,9 +18,9 @@ export const UserTabItems = ({ tabItem }) => {
             />
           )}
 
-          {tabItem.name === "Nfts owned" && (
-            <NftsOwned></NftsOwned>
-          )}
+          {tabItem.name === "Nfts owned" && <NftsOwned />}
+
+          {tabItem.name === "Wins" && <Wins profilePic={profilePic} />}
         </>
       )}
     </>

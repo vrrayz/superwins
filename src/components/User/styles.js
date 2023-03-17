@@ -8,8 +8,8 @@ overflow-x: hidden;
 margin: 0px 16px;
 `
 export const Avatar = styled.img`
-width: 92px;
-height: 92px;
+width: ${props => props.width || '24'}px;
+height: ${props => props.height || '24'}px;
 border-radius: 50%;
 `
 export const UserDetails = styled.div`
