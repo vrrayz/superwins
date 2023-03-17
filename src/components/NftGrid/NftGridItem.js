@@ -8,6 +8,9 @@ import {
   NftCardImage,
 } from "../general_components/NftCardImage";
 import { Badge } from "../general_components/Badge";
+import { SectionWrapper } from "../general_components/SectionWrapper";
+import { CardBody, CustomCard } from "../general_components/CustomCard";
+import { TextMedium, TextLarge, TextSmall, TextInlineSmall } from "../general_components/typography";
 
 export const NftGridItem = ({
   id,
@@ -27,8 +30,8 @@ export const NftGridItem = ({
   const redirect = (route) => navigate(route);
 
   return (
-    <div className="grid-item">
-      <div className="card nft-card border-0">
+    <SectionWrapper className='px-0'>
+      <CustomCard className="p-0 card-light border-0">
         <CardImageSection>
           <NftCardImage
             src={imgSrc}
@@ -41,37 +44,37 @@ export const NftGridItem = ({
             {!hasEnded && <Badge className="time_left">{timeLeft}</Badge>}
           </NftBadgeInfo>
         </CardImageSection>
-        <div className="card-body py-1">
-          <h5 className="nft_heading my-1">
+        <CardBody className="py-1 text-center">
+          <TextMedium className="my-1">
             <span>{name}</span>
             <i className="fa-solid fa-circle-check ms-1 text-primary"></i>
-          </h5>
-          <div className="nft-value my-1 mb-2 text-center">
-            <span className="amount">${value}</span>
-          </div>
+          </TextMedium>
+          <TextLarge className="fw-bold text-center text__dark-4 my-1">
+            ${value}
+          </TextLarge>
           <Button
             onClick={() => redirect(`/competition/${id}`)}
             disabled={hasEnded}
             className={`${
               hasEnded ? "bg__grey-1" : "btn-primary"
-            } d-block mx-auto text-center w-100 py-2 mb-3`}
+            } d-block mx-auto text-center w-100 py-2 px-2 mb-3 fw-bold`}
           >
-            {hasEnded ? "Ended few days ago" : "Enter Now"}
+            <TextInlineSmall>{hasEnded ? "Ended 16 days ago" : "Enter Now"}</TextInlineSmall>
           </Button>
           <div className="nft-card-footer text-center mb-2">
             {hasEnded ? (
-              <span className="text-uppercase fw-bold mb-1">Won by</span>
+              <TextInlineSmall className="text-uppercase fw-bold mb-1">Won by</TextInlineSmall>
             ) : (
               <>
-                <span className="text-uppercase fw-bold mb-1">
+                <TextSmall className="text-uppercase fw-bold mb-1">
                   Join {totalParticipants} Superwallers
-                </span>
-                <span>Closes: {date}</span>
+                </TextSmall>
+                <TextInlineSmall>Closes: {date}</TextInlineSmall>
               </>
             )}
           </div>
-        </div>
-      </div>
-    </div>
+        </CardBody>
+      </CustomCard>
+    </SectionWrapper>
   );
 };

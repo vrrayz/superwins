@@ -7,9 +7,11 @@
   --color-dark-1: #000;
   --color-dark-2: #202633;
   --color-dark-3: #20141c;
+  --color-dark-4: #313135;
   --color-primary-darkgrey-1: #3a1b27;
   --color-grey-1: #3b4151;
   --color-grey-2: #787f94;
+  --color-grey-3: #707177;
   --color-primary-red: #e70707;
   --color-light-1: #fff;
   --color-border-primary-red: rgb(174, 47, 47);
@@ -32,8 +34,23 @@
 .bg__grey-2{
   background-color: var(--color-grey-2);
 }
-.bg__grey-1, .bg__grey-2{
+.bg__grey-1, .bg__grey-2, .bg__dark-1, .bg__dark-4 .text__light-1{
   color: var(--color-light-1);
+}
+.bg__light-1{
+  background-color: var(--color-light-1);
+}
+.bg__dark-1{
+  background-color: var(--color-dark-1);
+}
+.bg__dark-4{
+  background-color: var(--color-dark-4);
+}
+.text__dark-1{
+  color: var(--color-dark-1);
+}
+.text__dark-4{
+  color: var(--color-dark-4);
 }
 
 /* width */
@@ -421,7 +438,7 @@ a {
 }
 
 .badge {
-  color: #707177;
+  color: var(--color-grey-3);
   background-color: var(--color-light-1);
   font-size: 14px;
   border-radius: 25px;
@@ -450,20 +467,9 @@ a {
 
 
 h5.nft_heading {
-  color: #707177;
+  color: var(--color-grey-3);
   font-weight: bold;
   font-size: 14px;
-}
-
-.card.nft-card {
-  color: #707177;
-}
-
-.nft-value .amount {
-  font-size: 18px;
-  margin-left: 4px;
-  font-weight: bold;
-  color: #313135;
 }
 
 .nft-card-footer {
