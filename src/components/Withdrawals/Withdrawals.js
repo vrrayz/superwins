@@ -18,7 +18,7 @@ import {
   TextSmall,
 } from "../general_components/typography";
 import styled from "styled-components";
-import { Button } from "../general_components/Button";
+import { Button, ButtonGrid } from "../general_components/Button";
 import checkmark from "../../assets/img/icons/icons8-checkmark-green.svg";
 import { Divider } from "../general_components/Divider";
 
@@ -85,23 +85,4 @@ export const Withdrawals = () => {
     </CenteredSectionWrapper>
   );
 };
-const ButtonGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  column-gap: 2px;
 
-  ${Button} {
-    border-radius: 12px;
-    padding: 4px 12px;
-    margin: auto;
-    background-color: var(--color-primary-darkgrey-1);
-    border-width: 2px;
-  }
-  ${Button}:disabled {
-    border-radius: 12px;
-    padding: 4px 12px;
-    margin: auto;
-    background-color: var(--color-primary-darkgrey-2) !important;
-    border-color: var(--color-primary-darkgrey-2) !important;
-  }
-`;

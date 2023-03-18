@@ -28,3 +28,23 @@ export const Button = styled.button`
     background-color: var(--color-light-red);
   }
 `;
+export const ButtonGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(${props => props.repeat || 6}, 1fr);
+  column-gap: ${props => props.gap || 2}px;
+
+  ${Button} {
+    border-radius: 12px;
+    padding: 4px 12px;
+    margin: auto;
+    background-color: var(--color-primary-darkgrey-1);
+    border-width: 2px;
+  }
+  ${Button}:disabled {
+    border-radius: 12px;
+    padding: 4px 12px;
+    margin: auto;
+    background-color: var(--color-primary-darkgrey-2) !important;
+    border-color: var(--color-primary-darkgrey-2) !important;
+  }
+`;
