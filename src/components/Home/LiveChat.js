@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import avatarImg from "../../assets/img/avatars/default.png";
 
-export const LiveChat = ({ isChatToggled }) => {
+export const LiveChat = ({ isChatToggled, isLocationExclusive }) => {
+  console.log("chat toggled ", isChatToggled) 
+  console.log("location exclusive ", isLocationExclusive) 
   return (
-    <LiveChatContainer isChatToggled={isChatToggled}>
+    <LiveChatContainer isChatToggled={isChatToggled} isLocationExclusive={isLocationExclusive}>
       <ChatsSection>
         <ChatInfo>
           <img src={avatarImg} alt="user" className="mt-1" />
@@ -72,7 +75,7 @@ const LiveChatContainer = styled.aside`
     max-width: 320px;
   }
   @media (min-width: 1200px) {
-    display: grid;
+    display: ${({isChatToggled, isLocationExclusive}) => isLocationExclusive || (!isLocationExclusive && isChatToggled) ? `grid`:`none` };
     background-color: var(--color-dark-3);
     position: fixed;
     right: 0;

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { Navbar } from "./Navbar";
 import { ConnectWalletModal } from "./ConnectWalletModal";
@@ -8,10 +8,17 @@ import logo from "../assets/img/logo.png";
 import { Competition } from "./Competition/Competition";
 import { Home } from "./Home/Home";
 import { User } from "./User/User";
+import { Withdrawals } from "./Withdrawals/Withdrawals";
 
 export const MainRoutes = () => {
   const [connectWalletModal, setConnectWalletModal] = useState(false);
   const [isChatToggled, setIsChatToggled] = useState(false);
+  const location = useLocation()
+  const [isLocationExclusive, setIsLocationExclusive] = useState(true)
+  useEffect(() => {
+    console.log(location.pathname === '/withdrawals' ? 'Yes' : 'no')
+    location.pathname === '/withdrawals' ? setIsLocationExclusive(false)  : setIsLocationExclusive(true)
+  },[location]) 
   return (
     <>
       <Navbar setConnectWalletModal={setConnectWalletModal} logo={logo} />
@@ -23,12 +30,14 @@ export const MainRoutes = () => {
         <Route index element={<Home />} />
         <Route path="competition/:id" element={<Competition />} />
         <Route path="sw/:username" element={<User />} />
+        <Route path="withdrawals" element={<Withdrawals />} />
       </Routes>
 
-      <LiveChat isChatToggled={isChatToggled} />
+      <LiveChat isChatToggled={isChatToggled} isLocationExclusive={isLocationExclusive} />
       <ToggleChatButton
         onClick={() => setIsChatToggled(!isChatToggled)}
         isChatToggled={isChatToggled}
+        isLocationExclusive={isLocationExclusive}
       >
         {isChatToggled ? (
           <i className="fa-solid fa-xmark"></i>
@@ -56,6 +65,6 @@ const ToggleChatButton = styled.button`
   transition: 100ms;
   transition-timing-function: ease-in-out;
   @media (min-width: 1200px) {
-    display: none;
+    display: ${({isLocationExclusive}) => isLocationExclusive ? `none`:`block` };
   }
 `;
