@@ -9,7 +9,7 @@ export const ModalOverlay = styled.div`
   color: var(--color-light-1);
   width: 100vw;
   height: 100vh;
-  z-index: 10000;
+  z-index: 100001;
   display: flex;
   justify-content: center;
   flex-direction: column;
