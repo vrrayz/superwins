@@ -16,7 +16,6 @@ export const MainRoutes = () => {
   const location = useLocation()
   const [isLocationExclusive, setIsLocationExclusive] = useState(true)
   useEffect(() => {
-    console.log(location.pathname === '/withdrawals' ? 'Yes' : 'no')
     location.pathname === '/withdrawals' ? setIsLocationExclusive(false)  : setIsLocationExclusive(true)
   },[location]) 
   return (

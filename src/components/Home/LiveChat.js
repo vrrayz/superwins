@@ -2,8 +2,7 @@ import styled from "styled-components";
 import avatarImg from "../../assets/img/avatars/default.png";
 
 export const LiveChat = ({ isChatToggled, isLocationExclusive }) => {
-  console.log("chat toggled ", isChatToggled) 
-  console.log("location exclusive ", isLocationExclusive) 
+
   return (
     <LiveChatContainer isChatToggled={isChatToggled} isLocationExclusive={isLocationExclusive}>
       <ChatsSection>
