@@ -10,13 +10,14 @@ import {
 
 export const Verification = () => {
   const [inputs, setInputs] = useState(otpInputs);
-  const setValue = (e,index) => {
-    setInputs(inputs.map((input, i) => {
+  const setValue = (e, index) => {
+    setInputs(
+      inputs.map((input, i) => {
         if(index === i) input.value = e.target.value;
-        return input
-    }))
-  }
-
+        return input;
+      })
+    );
+  };
   return (
     <>
       <TextLarge className="text-uppercase text-center">
@@ -37,8 +38,9 @@ export const Verification = () => {
             className="mb-3 px-0 text-center"
             autoFocus={input.autoFocus}
             value={input.value}
+            maxLength={1}
             // onKeyUp={(e) => setValue(e,index)}
-            onChange={(e) => setValue(e,index)}
+            onChange={(e) => setValue(e, index)}
           />
         ))}
       </OtpGrid>
