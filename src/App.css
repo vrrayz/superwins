@@ -13,6 +13,7 @@
   --color-grey-1: #3b4151;
   --color-grey-2: #787f94;
   --color-grey-3: #707177;
+  --color-grey-4: #bbb;
   --color-light-red: #df4f4f;
   --color-primary-red: #e70707;
   --color-light-1: #fff;
@@ -29,6 +30,12 @@
 }
 .text__grey-2{
   color: var(--color-grey-2);
+}
+.text__grey-3{
+  color: var(--color-grey-3);
+}
+.text__grey-4{
+  color: var(--color-grey-4);
 }
 .bg__grey-1{
   background-color: var(--color-grey-1);
@@ -314,44 +321,6 @@ a {
   margin-top: 22px !important;
 }
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  background-color: rgba(20, 7, 7, .8);
-  color: var(--color-light-1);
-  width: 100vw;
-  height: 100vh;
-  z-index: 10000;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.custom-modal {
-  width: 100%;
-  max-width: 320px;
-  padding: 1.5rem;
-  border-radius: 25px;
-  background-color: #1d222e;
-  margin: auto;
-  animation-name: fadeIn;
-  animation-duration: 300ms;
-  animation-fill-mode: forwards;
-}
-
-.modal-head {
-  display: flex;
-  justify-content: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 8px 0px;
-}
-
-.modal-head h1 {
-  margin-left: auto;
-  font-size: 1.727rem;
-}
-
 .modal-desc {
   color: #bbb;
   font-size: 14px;
@@ -359,7 +328,7 @@ a {
   margin: 8px 0px;
 }
 
-.modal-body .wallet-options {
+.wallet-options {
   background-color: var(--color-grey-1);
   border-radius: 25px;
   margin: 16px 0px;
@@ -384,22 +353,6 @@ a {
   flex-grow: 1;
   margin-right: 32px;
   letter-spacing: 1px;
-}
-
-.custom-btn-close {
-
-  background-color: var(--color-grey-1);
-  border-radius: 50%;
-  padding: 0px 14px 3px 14px !important;
-  text-align: center;
-}
-
-.custom-btn-close img {
-  width: 12px;
-}
-
-.modal-head .custom-btn-close {
-  margin-left: auto;
 }
 
 /* *************** TABS *************** */
