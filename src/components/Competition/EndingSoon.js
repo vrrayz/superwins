@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Button } from "../general_components/Button";
 import { CustomCard } from "../general_components/CustomCard";
 import { SectionWrapper } from "../general_components/SectionWrapper";
-import { EntryGrid, NftValue } from "./styles";
 
 export const EndingSoon = () => {
   return (

@@ -17,7 +17,6 @@ import {
   TextMedium,
   TextSmall,
 } from "../general_components/typography";
-import styled from "styled-components";
 import { Button, ButtonGrid } from "../general_components/Button";
 import checkmark from "../../assets/img/icons/icons8-checkmark-green.svg";
 import { Divider } from "../general_components/Divider";

@@ -2,11 +2,9 @@ import React from "react";
 import metamask_logo from "../assets/img/wallets/metamask.svg";
 import walletconnect_logo from "../assets/img/wallets/walletconnect.svg";
 import coinbase_logo from "../assets/img/wallets/coinbase.png";
-import closeIcon from "../assets/img/icons/close.svg";
 import {
   TextInlineMedium,
   TextLarge,
-  TextMedium,
   TextSmall,
 } from "./general_components/typography";
 import {

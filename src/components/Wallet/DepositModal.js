@@ -16,7 +16,6 @@ import {
   ModalOverlay,
 } from "../general_components/Modal";
 import { Icon, ImgIcon } from "../general_components/Icon";
-import styled from "styled-components";
 import { Button, ButtonGrid } from "../general_components/Button";
 import { Input } from "../general_components/Input";
 import { SectionWrapper } from "../general_components/SectionWrapper";
