@@ -1,19 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { otpInputs } from "../../data/otpInputs";
 import { Input } from "../general_components/Input";
-import {
-  TextInlineSmall,
-  TextLarge,
-  TextSmall,
-} from "../general_components/typography";
+import { TextLarge, TextSmall } from "../general_components/typography";
 
 export const Verification = () => {
   const [inputs, setInputs] = useState(otpInputs);
   const setValue = (e, index) => {
     setInputs(
       inputs.map((input, i) => {
-        if(index === i) input.value = e.target.value;
+        if (index === i) input.value = e.target.value;
         return input;
       })
     );
