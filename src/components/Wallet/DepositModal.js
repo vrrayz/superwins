@@ -56,7 +56,7 @@ export const DepositModal = ({ toggleDepositModal }) => {
             <Button className="btn-primary-transparent">0.1</Button>
           </ButtonGrid>
           <Button className="btn-primary d-block w-100 mb-3" disabled>
-            Instant Withdraw
+            Add Funds
           </Button>
           <ImgIcon src={checkmark} width={36} height={36} />
         <SectionWrapper style={{ color: "#bf66c2" }}>
