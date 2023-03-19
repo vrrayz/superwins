@@ -10,13 +10,14 @@ import { Home } from "./Home/Home";
 import { User } from "./User/User";
 import { Withdrawals } from "./Withdrawals/Withdrawals";
 import { Wallet } from "./Wallet/Wallet";
+import { Account } from "./Account/Account";
 
 export const MainRoutes = () => {
   const [connectWalletModal, setConnectWalletModal] = useState(false);
   const [isChatToggled, setIsChatToggled] = useState(false);
   const location = useLocation()
   const [isLocationExclusive, setIsLocationExclusive] = useState(true)
-  const locationExclusivePaths = ['/withdrawals','/wallet']
+  const locationExclusivePaths = ['/withdrawals','/wallet','/account']
   useEffect(() => {
     locationExclusivePaths.indexOf(location.pathname) >= 0 ? setIsLocationExclusive(false)  : setIsLocationExclusive(true)
   },[location]) 
@@ -33,6 +34,7 @@ export const MainRoutes = () => {
         <Route path="sw/:username" element={<User />} />
         <Route path="withdrawals" element={<Withdrawals />} />
         <Route path="wallet" element={<Wallet />} />
+        <Route path="account" element={<Account />} />
       </Routes>
 
       <LiveChat isChatToggled={isChatToggled} isLocationExclusive={isLocationExclusive} />
