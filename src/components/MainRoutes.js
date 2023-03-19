@@ -17,7 +17,7 @@ export const MainRoutes = () => {
   const [isChatToggled, setIsChatToggled] = useState(false);
   const location = useLocation()
   const [isLocationExclusive, setIsLocationExclusive] = useState(true)
-  const locationExclusivePaths = ['/withdrawals','/wallet','/account']
+  const locationExclusivePaths = ['/withdrawals','/wallet','/account','/account/games-activity']
   useEffect(() => {
     locationExclusivePaths.indexOf(location.pathname) >= 0 ? setIsLocationExclusive(false)  : setIsLocationExclusive(true)
   },[location]) 
@@ -35,6 +35,7 @@ export const MainRoutes = () => {
         <Route path="withdrawals" element={<Withdrawals />} />
         <Route path="wallet" element={<Wallet />} />
         <Route path="account" element={<Account />} />
+        <Route path="account/games-activity" element={<Account />} />
       </Routes>
 
       <LiveChat isChatToggled={isChatToggled} isLocationExclusive={isLocationExclusive} />

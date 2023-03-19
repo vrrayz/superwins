@@ -14,8 +14,13 @@ import profilePic from "../../assets/img/avatars/avatar.png";
 import editIcon from "../../assets/img/icons/icons8-edit-light.svg";
 import { Avatar } from "../User/styles";
 import { Icon, ImgIcon } from "../general_components/Icon";
-import { TextInlineMedium, TextLarge, TextMedium } from "../general_components/typography";
+import {
+  TextInlineMedium,
+  TextLarge,
+  TextMedium,
+} from "../general_components/typography";
 import { Button } from "../general_components/Button";
+import { Link } from "react-router-dom";
 
 export const Account = () => {
   return (
@@ -47,9 +52,11 @@ export const Account = () => {
         </SectionWrapper>
         <SectionWrapper className="px-0 text__light-1 text-uppercase text-start mb-4">
           <TextMedium className="mb-2">Communication settings</TextMedium>
-          <SlateSection content={'start'} paddingX={8} className="mb-5">
-            <InputToggle name='marketingEmails' className="mt-2 me-3" />
-            <TextMedium className="text__grey-2 mb-0">Send me marketing emails from time to time</TextMedium>
+          <SlateSection content={"start"} paddingX={8} className="mb-5">
+            <InputToggle name="marketingEmails" className="mt-2 me-3" />
+            <TextMedium className="text__grey-2 mb-0">
+              Send me marketing emails from time to time
+            </TextMedium>
           </SlateSection>
 
           <TextMedium className="mb-2">Connect your social accounts</TextMedium>
@@ -58,7 +65,9 @@ export const Account = () => {
               <RoundIconWrapper>
                 <Icon className="fa-brands fa-discord"></Icon>
               </RoundIconWrapper>
-              <TextInlineMedium className="my-auto ms-2">Discord</TextInlineMedium>
+              <TextInlineMedium className="my-auto ms-2">
+                Discord
+              </TextInlineMedium>
             </SocialMediaFlex>
             <Button className={`text-center py-2 px-3 ms-1 btn-primary`}>
               <TextInlineMedium>connect</TextInlineMedium>
@@ -69,7 +78,9 @@ export const Account = () => {
               <RoundIconWrapper>
                 <Icon className="fa-brands fa-twitter"></Icon>
               </RoundIconWrapper>
-              <TextInlineMedium className="my-auto ms-2">Twitter</TextInlineMedium>
+              <TextInlineMedium className="my-auto ms-2">
+                Twitter
+              </TextInlineMedium>
             </SocialMediaFlex>
             <Button className={`text-center py-2 px-3 ms-1 btn-primary`}>
               <TextInlineMedium>connect</TextInlineMedium>
@@ -77,10 +88,16 @@ export const Account = () => {
           </SlateSection>
           <TextMedium className="mb-2">Logs</TextMedium>
           <SlateSection paddingX={8} className="mb-0">
-            <TextInlineMedium className="text__grey-2">Games History</TextInlineMedium>
+            <Link to={"/account/games-activity"}>
+              <TextInlineMedium className="text__grey-2">
+                Games History
+              </TextInlineMedium>
+            </Link>
           </SlateSection>
         </SectionWrapper>
-        <TextMedium className="mb-0 text__grey-2 text-uppercase">Log out</TextMedium>
+        <TextMedium className="mb-0 text__grey-2 text-uppercase">
+          Log out
+        </TextMedium>
       </MidSectionWrapper>
     </CenteredSectionWrapper>
   );
@@ -93,27 +110,27 @@ const MidSectionWrapper = styled(SectionWrapper)`
 const SlateSection = styled.div`
   border-top: 1px solid var(--color-grey-1);
   border-bottom: 1px solid var(--color-grey-1);
-  padding: ${props => props.paddingX || '20'}px 0px;
+  padding: ${(props) => props.paddingX || "20"}px 0px;
   display: flex;
   flex-direction: row;
   text-transform: none;
-  justify-content: ${props => props.content || 'space-between'};
+  justify-content: ${(props) => props.content || "space-between"};
 `;
 const SocialMediaFlex = styled.div`
-display: flex;
-text-transform: uppercase;
-font-weight: bold;
-`
+  display: flex;
+  text-transform: uppercase;
+  font-weight: bold;
+`;
 const RoundIconWrapper = styled.div`
-width: 40px;
-height: 40px;
-border-radius: 50%;
-background-color: var(--color-primary-red);
-text-align: center;
-display:flex;
-justify-content:center;
-flex-direction:column;
-${Icon}{
-  color: var(--color-light-1);
-}
-`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-primary-red);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  ${Icon} {
+    color: var(--color-light-1);
+  }
+`;
